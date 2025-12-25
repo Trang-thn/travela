@@ -1,55 +1,167 @@
-<!-- Hero Area Start -->
-        <section class="hero-area bgc-black pt-200 rpt-120 rel z-2">
-            <div class="container-fluid">
-                <h1 class="hero-title" data-aos="flip-up" data-aos-delay="50" data-aos-duration="1500" data-aos-offset="50">tour & Travel</h1>
-                <div class="main-hero-image bgs-cover" style="background-image: url(assets/images/hero/hero.jpg);"></div>
-            </div>
-            <div class="container container-1400">
-                <div class="search-filter-inner" data-aos="zoom-out-down" data-aos-duration="1500" data-aos-offset="50">
-                    <div class="filter-item clearfix">
-                        <div class="icon"><i class="fal fa-map-marker-alt"></i></div>
-                        <span class="title">Destinations</span>
-                        <select name="city" id="city">
-                            <option value="value1">City or Region</option>
-                            <option value="value2">City</option>
-                            <option value="value2">Region</option>
-                        </select>
-                    </div>
-                    <div class="filter-item clearfix">
-                        <div class="icon"><i class="fal fa-flag"></i></div>
-                        <span class="title">All Activity</span>
-                        <select name="activity" id="activity">
-                            <option value="value1">Choose Activity</option>
-                            <option value="value2">Daily</option>
-                            <option value="value2">Monthly</option>
-                        </select>
-                    </div>
-                    <div class="filter-item clearfix">
-                        <div class="icon"><i class="fal fa-calendar-alt"></i></div>
-                        <span class="title">Departure Date</span>
-                        <select name="date" id="date">
-                            <option value="value1">Date from</option>
-                            <option value="value2">10</option>
-                            <option value="value2">20</option>
-                        </select>
-                    </div>
-                    <div class="filter-item clearfix">
-                        <div class="icon"><i class="fal fa-users"></i></div>
-                        <span class="title">Guests</span>
-                        <select name="cuests" id="cuests">
-                            <option value="value1">0</option>
-                            <option value="value2">1</option>
-                            <option value="value2">2</option>
-                        </select>
-                    </div>
-                    <div class="search-button">
-                        <button class="theme-btn">
-                            <span data-hover="Search">Search</span>
-                            <i class="far fa-search"></i>
-                        </button>
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"><div class="custom-loader"></div></div>
+
+        <!-- main header -->
+        <header class="main-header header-one white-menu menu-absolute">
+            <!--Header-Upper-->
+            <div class="header-upper py-30 rpy-0">
+                <div class="container-fluid clearfix">
+
+                    <div class="header-inner rel d-flex align-items-center">
+                        <div class="logo-outer">
+                            <div class="logo"><a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo" title="Logo"></a></div>
+                        </div>
+
+                        <div class="nav-outer mx-lg-auto ps-xxl-5 clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-lg">
+                                <div class="navbar-header">
+                                   <div class="mobile-logo">
+                                       <a href="index.html">
+                                            <img src="assets/images/logos/logo.png" alt="Logo" title="Logo">
+                                       </a>
+                                   </div>
+                                   
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class="dropdown current"><a href="">Home</a>
+                                            <ul>
+                                                <li><a href="index.html">Travel Agency</a></li>
+                                                <li><a href="index2.html">City Tou</a></li>
+                                                <li><a href="index3.html">Tour Package</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{{ route('about') }}">About</a></li>
+                                        <li class="dropdown"><a href="#">Tours</a>
+                                            <ul>
+                                                <li><a href="tour-list.html">Tour List</a></li>
+                                                <li><a href="tour-grid.html">Tour Grid</a></li>
+                                                <li><a href="tour-sidebar.html">Tour Sidebar</a></li>
+                                                <li><a href="tour-details.html">Tour Details</a></li>
+                                                <li><a href="tour-guide.html">Tour Guide</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#">Destinations</a>
+                                            <ul>
+                                                <li><a href="destination1.html">Destination 01</a></li>
+                                                <li><a href="destination2.html">Destination 01</a></li>
+                                                <li><a href="destination-details.html">Destination Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#">Pages</a>
+                                            <ul>
+                                                <li><a href="pricing.html">Pricing</a></li>
+                                                <li><a href="faqs.html">faqs</a></li>
+                                                <li class="dropdown"><a href="#">Gallery</a>
+                                                    <ul>
+                                                        <li><a href="gellery-grid.html">Gallery Grid</a></li>
+                                                        <li><a href="gellery-slider.html">Gallery Slider</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown"><a href="#">products</a>
+                                                    <ul>
+                                                        <li><a href="shop.html">Our Products</a></li>
+                                                        <li><a href="product-details.html">Product Details</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="contact.html">Contact Us</a></li>
+                                                <li><a href="404.html">404 Error</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#">blog</a>
+                                            <ul>
+                                                <li><a href="blog.html">blog List</a></li>
+                                                <li><a href="blog-details.html">blog details</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </nav>
+                            <!-- Main Menu End-->
+                        </div>
+                        
+                        <!-- Nav Search -->
+                        <div class="nav-search">
+                            <button class="far fa-search"></button>
+                            <form action="#" class="hide">
+                                <input type="text" placeholder="Search" class="searchbox" required="">
+                                <button type="submit" class="searchbutton far fa-search"></button>
+                            </form>
+                        </div>
+                        
+                        <!-- Menu Button -->
+                        <div class="menu-btns py-10">
+                            <a href="contact.html" class="theme-btn style-two bgc-secondary">
+                                <span data-hover="Book Now">Book Now</span>
+                                <i class="fal fa-arrow-right"></i>
+                            </a>
+                            <!-- menu sidbar -->
+                            <div class="menu-sidebar">
+                                <button class="bg-transparent">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Hero Area End -->
+            <!--End Header Upper-->
+        </header>
+       
+
+        <!--Form Back Drop-->
+        <div class="form-back-drop"></div>
         
+        <!-- Hidden Sidebar -->
+        <section class="hidden-bar">
+            <div class="inner-box text-center">
+                <div class="cross-icon"><span class="fa fa-times"></span></div>
+                <div class="title">
+                    <h4>Get Appointment</h4>
+                </div>
+
+                <!--Appointment Form-->
+                <div class="appointment-form">
+                    <form method="post" action="https://webtendtheme.net/html/2024/ravelo/contact.html">
+                        <div class="form-group">
+                            <input type="text" name="text" value="" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" value="" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Message" rows="5"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="theme-btn style-two">
+                                <span data-hover="Submit now">Submit now</span>
+                                <i class="fal fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!--Social Icons-->
+                <div class="social-style-one">
+                    <a href="contact.html"><i class="fab fa-twitter"></i></a>
+                    <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="contact.html"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </section>
+        <!--End Hidden Sidebar -->
+                
