@@ -1,4 +1,4 @@
-        <!-- footer area start -->
+ <!-- footer area start -->
         <footer class="main-footer bgs-cover overlay rel z-1 pb-25" style="background-image: url(assets/images/backgrounds/footer.jpg);">
             <div class="container">
                 <div class="footer-top pt-100 pb-30">
@@ -131,35 +131,3 @@
             </div>
         </footer>
         <!-- footer area end -->
-
-    </div>
-    <!--End pagewrapper-->
-
-
-    <!-- Jquery -->
-    <script src="{{ asset('clients/js/jquery-3.6.0.min.js')}}"></script>
-    <!-- Bootstrap -->
-    <script src="{{ asset('clients/jclients/s/bootstrap.min.js')}}"></script>
-    <!-- Appear Js -->
-    <script src="{{ asset('clients/js/appear.min.js')}}"></script>
-    <!-- Slick -->
-    <script src="{{ asset('clients/js/slick.min.js')}}"></script>
-    <!-- Magnific Popup -->
-    <script src="{{ asset('clients/js/jquery.magnific-popup.min.js')}}"></script>
-    <!-- Nice Select -->
-    <script src="{{ asset('clients/js/jquery.nice-select.min.js')}}"></script>
-    <!-- Image Loader -->
-    <script src="{{ asset('clients/js/imagesloaded.pkgd.min.js')}}"></script>
-    <!-- Skillbar -->
-    <script src="{{ asset('clients/js/skill.bars.jquery.min.js')}}"></script>
-    <!-- Isotope -->
-    <script src="{{ asset('clients/js/isotope.pkgd.min.js')}}"></script>
-    <!--  AOS Animation -->
-    <script src="{{ asset('clients/js/aos.js')}}"></script>
-    <!-- Custom script -->
-    <script src="{{ asset('clients/js/script.js')}}"></script>
-
-</body>
-
-<!-- Mirrored from webtendtheme.net/html/2024/ravelo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Oct 2024 09:27:04 GMT -->
-</html>

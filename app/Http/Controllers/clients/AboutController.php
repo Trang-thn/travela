@@ -12,7 +12,7 @@ class AboutController extends Controller
      */
     public function index()
     {
-        return view('clients.about');
+        return view("clients.about");
     }
 
     /**
@@ -20,7 +20,7 @@ class AboutController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
