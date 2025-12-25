@@ -5,14 +5,14 @@ namespace App\Http\Controllers\clients;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ServiceController extends Controller
+class BlogDetailController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view("clients.service");
+        return view('clients.blog-detail');
     }
 
     /**

@@ -6,14 +6,14 @@
                         <div class="col-xl-5 col-lg-6" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
                             <div class="footer-widget footer-text">
                                 <div class="footer-logo mb-25">
-                                    <a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo"></a>
+                                    <a href="{{ route('home') }}"><img src="assets/images/logos/logo.png" alt="Logo"></a>
                                 </div>
                                 <p>We curate bespoke itineraries tailored to your preferences, ensuring every trip is seamless and enriching hidden gems beaten</p>
                                 <div class="social-style-one mt-15">
-                                    <a href="contact.html"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="contact.html"><i class="fab fa-youtube"></i></a>
-                                    <a href="contact.html"><i class="fab fa-pinterest"></i></a>
-                                    <a href="contact.html"><i class="fab fa-twitter"></i></a>
+                                    <a href="{{ route('contact') }}"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="{{ route('contact') }}"><i class="fab fa-youtube"></i></a>
+                                    <a href="{{ route('contact') }}"><i class="fab fa-pinterest"></i></a>
+                                    <a href="{{ route('contact') }}"><i class="fab fa-twitter"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -56,11 +56,11 @@
                                     <h5>Company</h5>
                                 </div>
                                 <ul class="list-style-three">
-                                    <li><a href="about.html">About Company</a></li>
-                                    <li><a href="blog.html">Community Blog</a></li>
-                                    <li><a href="contact.html">Jobs and Careers</a></li>
-                                    <li><a href="blog.html">latest News Blog</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="{{ route('about') }}">About Company</a></li>
+                                    <li><a href="{{ route('blogs') }}">">Community Blog</a></li>
+                                    <li><a href="{{ route('contact') }}">">Jobs and Careers</a></li>
+                                    <li><a href="{{ route('blogs') }}"></a>">latest News Blog</a></li>
+                                    <li><a href="{{ route('contact') }}"></a>">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -84,11 +84,11 @@
                                     <h5>Categories</h5>
                                 </div>
                                 <ul class="list-style-three">
-                                    <li><a href="contact.html">Adventure</a></li>
-                                    <li><a href="contact.html">Hiking & Trekking</a></li>
-                                    <li><a href="contact.html">Cycling Tours</a></li>
-                                    <li><a href="contact.html">Family Tours</a></li>
-                                    <li><a href="contact.html">Wildlife Tours</a></li>
+                                    <li><a href="{{ route('contact') }}">Adventure</a></li>
+                                    <li><a href="{{ route('contact') }}">Hiking & Trekking</a></li>
+                                    <li><a href="{{ route('contact') }}">Cycling Tours</a></li>
+                                    <li><a href="{{ route('contact') }}">Family Tours</a></li>
+                                    <li><a href="{{ route('contact') }}">Wildlife Tours</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -113,15 +113,15 @@
                     <div class="row">
                        <div class="col-lg-5">
                             <div class="copyright-text text-center text-lg-start">
-                                <p>@Copy 2024 <a href="index.html">Ravelo</a>, All rights reserved</p>
+                                <p>@Copy 2025 <a href="{{ route('home') }}">Ravelo</a>, All rights reserved</p>
                             </div>
                        </div>
                        <div class="col-lg-7 text-center text-lg-end">
                            <ul class="footer-bottom-nav">
-                               <li><a href="about.html">Terms</a></li>
-                               <li><a href="about.html">Privacy Policy</a></li>
-                               <li><a href="about.html">Legal notice</a></li>
-                               <li><a href="about.html">Accessibility</a></li>
+                               <li><a href="{{ route('about') }}">Terms</a></li>
+                               <li><a href="{{ route('about') }}">Privacy Policy</a></li>
+                               <li><a href="{{ route('about') }}">Legal notice</a></li>
+                               <li><a href="{{ route('about') }}">Accessibility</a></li>
                            </ul>
                        </div>
                     </div>
@@ -134,8 +134,8 @@
 
     </div>
     <!--End pagewrapper-->
-   
-    
+
+
     <!-- Jquery -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap -->
@@ -161,5 +161,4 @@
 
 </body>
 
-<!-- Mirrored from webtendtheme.net/html/2024/ravelo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 07 Oct 2024 09:27:04 GMT -->
 </html>

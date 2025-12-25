@@ -3,11 +3,24 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\clients\HomeController;
 use App\Http\Controllers\clients\AboutController;
-use App\Http\Controllers\clients\ServiceController;
+use App\Http\Controllers\clients\ToursController;
+use App\Http\Controllers\clients\TourGuidesController;
+use App\Http\Controllers\clients\DestinationController;
+use App\Http\Controllers\clients\ContactController;
+use App\Http\Controllers\clients\TourDetailController;
+use App\Http\Controllers\clients\BlogController;
+use App\Http\Controllers\clients\BlogDetailController;
+
 
 // Route::get('/', function () {
 //     return view('home');
 // });
 Route::get('/', [HomeController::class,'index'])->name('home');
 Route::get('/about', [AboutController::class, 'index'])->name('about');
-Route::get('/service', [AboutController::class, 'index'])->name('service');
+Route::get('/tours', action: [ToursController::class, 'index'])->name('tours');
+Route::get('/tour-guides', [TourGuidesController::class, 'index'])->name('tour-guides');
+Route::get('/destination', [DestinationController::class, 'index'])->name('destination');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::get('/tour-detail', [TourDetailController::class, 'index'])->name('tour-detail');
+Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
+Route::get('/blog-detail', [BlogDetailController::class, 'index'])->name('blog-detail');

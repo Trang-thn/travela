@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-   <!-- Title -->
+    <!-- Title -->
     <title>Ravelo - Travel & Tour Booking HTML Template</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" href="{{ asset('assets/images/logos/favicon.png') }}" type="image/x-icon">
@@ -34,20 +34,20 @@
 
 </head>
 <body>
-    <div class="page-wrapper">
+<div class="page-wrapper">
 
         <!-- Preloader -->
         <div class="preloader"><div class="custom-loader"></div></div>
 
         <!-- main header -->
-        <header class="main-header header-one">
+        <header class="main-header header-one white-menu menu-absolute">
             <!--Header-Upper-->
-            <div class="header-upper bg-white py-30 rpy-0">
+            <div class="header-upper py-30 rpy-0">
                 <div class="container-fluid clearfix">
 
                     <div class="header-inner rel d-flex align-items-center">
                         <div class="logo-outer">
-                            <div class="logo"><a href="{{ route('home') }}"><img src="{{asset('clients/assets/images/logos/logo-two.png')}}" alt="Logo" title="Logo"></a></div>
+                            <div class="logo"><a href="{{ route('home') }}"><img src="{{asset('clients/assets/images/logos/logo.png')}}" alt="Logo" title="Logo"></a></div>
                         </div>
 
                         <div class="nav-outer mx-lg-auto ps-xxl-5 clearfix">
@@ -56,7 +56,7 @@
                                 <div class="navbar-header">
                                    <div class="mobile-logo">
                                        <a href="{{ route('home') }}">
-                                            <img src="{{asset('clients/assets/images/logos/logo-two.png')}}" alt="Logo" title="Logo">
+                                            <img src="{{asset('clients/assets/images/logos/logo.png')}}" alt="Logo" title="Logo">
                                        </a>
                                    </div>
 
@@ -86,6 +86,15 @@
 
                             </nav>
                             <!-- Main Menu End-->
+                        </div>
+
+                        <!-- Nav Search -->
+                        <div class="nav-search">
+                            <button class="far fa-search"></button>
+                            <form action="#" class="hide">
+                                <input type="text" placeholder="Search" class="searchbox" required="">
+                                <button type="submit" class="searchbutton far fa-search"></button>
+                            </form>
                         </div>
 
                         <!-- Menu Button -->
