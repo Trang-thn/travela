@@ -7,48 +7,41 @@
                     <div class="col-lg-3 col-md-6 col-sm-10 rmb-75">
                         <div class="shop-sidebar">
                             <div class="widget widget-filter" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-offset="50">
-                                <h6 class="widget-title">Filter by Price</h6>
+                                <h6 class="widget-title">Lọc theo giá </h6>
                                 <div class="price-filter-wrap">
                                     <div class="price-slider-range"></div>
                                     <div class="price">
-                                        <span>Price </span>
+                                        <span>Giá </span>
                                         <input type="text" id="price" readonly>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="widget widget-activity" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
-                                <h6 class="widget-title">By Activities</h6>
+                                <h6 class="widget-title">Điểm đến </h6>
                                 <ul class="radio-filter">
                                     <li>
                                         <input class="form-check-input" type="radio" checked name="ByActivities" id="activity1">
-                                        <label for="activity1">Sea Beach <span>18</span></label>
+                                        <label for="activity1">Biển – đảo <span>18</span></label>
                                     </li>
                                     <li>
                                         <input class="form-check-input" type="radio" name="ByActivities" id="activity2">
-                                        <label for="activity2">Car Parking <span>29</span></label>
+                                        <label for="activity2">Núi – thiên nhiên <span>29</span></label>
                                     </li>
                                     <li>
                                         <input class="form-check-input" type="radio" name="ByActivities" id="activity3">
-                                        <label for="activity3">Laundry Service <span>23</span></label>
+                                        <label for="activity3">Văn hóa – lịch sử <span>23</span></label>
                                     </li>
                                     <li>
                                         <input class="form-check-input" type="radio" name="ByActivities" id="activity4">
-                                        <label for="activity4">Outdoor Seating <span>25</span></label>
+                                        <label for="activity4">Du lịch sinh thái – nghỉ dưỡng <span>25</span></label>
                                     </li>
-                                    <li>
-                                        <input class="form-check-input" type="radio" name="ByActivities" id="activity5">
-                                        <label for="activity5">Reservations <span>26</span></label>
-                                    </li>
-                                    <li>
-                                        <input class="form-check-input" type="radio" name="ByActivities" id="activity6">
-                                        <label for="activity6">Smoking Allowed <span>28</span></label>
-                                    </li>
+                                     
                                 </ul>
                             </div>
 
                             <div class="widget widget-reviews" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
-                                <h6 class="widget-title">By Reviews</h6>
+                                <h6 class="widget-title">Đánh giá </h6>
                                 <ul class="radio-filter">
                                     <li>
                                         <input class="form-check-input" type="radio" checked name="ByReviews" id="review1">
@@ -114,63 +107,41 @@
                             </div>
 
                             <div class="widget widget-languages" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
-                                <h6 class="widget-title">By Languages</h6>
+                                <h6 class="widget-title">Ngôn ngữ </h6>
                                 <ul class="radio-filter">
                                     <li>
                                         <input class="form-check-input" type="radio" checked name="ByLanguages" id="language1">
-                                        <label for="language1">American</label>
+                                        <label for="language1">Tiếng Việt  </label>
                                     </li>
                                     <li>
                                         <input class="form-check-input" type="radio" name="ByLanguages" id="language2">
-                                        <label for="language2">English</label>
+                                        <label for="language2">Tiếng Anh </label>
                                     </li>
-                                    <li>
-                                        <input class="form-check-input" type="radio" name="ByLanguages" id="language3">
-                                        <label for="language3">German</label>
-                                    </li>
-                                    <li>
-                                        <input class="form-check-input" type="radio" name="ByLanguages" id="language4">
-                                        <label for="language4">Japanese</label>
-                                    </li>
-                                    <li>
-                                        <input class="form-check-input" type="radio" name="ByLanguages" id="language5">
-                                        <label for="language5">Vietnamese</label>
-                                    </li>
-                                    <li>
-                                        <input class="form-check-input" type="radio" name="ByLanguages" id="language6">
-                                        <label for="language6">French</label>
-                                    </li>
+                                     
                                 </ul>
                             </div>
 
                             <div class="widget widget-duration" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
-                                <h6 class="widget-title">Duration</h6>
+                                <h6 class="widget-title">Thời gian  </h6>
                                 <ul class="radio-filter">
                                     <li>
                                         <input class="form-check-input" type="radio" checked name="Duration" id="duration1">
-                                        <label for="duration1">0 - 2 hours</label>
+                                        <label for="duration1">trong ngày </label>
                                     </li>
                                     <li>
                                         <input class="form-check-input" type="radio" name="Duration" id="duration2">
-                                        <label for="duration2">2 - 4 hours</label>
+                                        <label for="duration2"> 1 ngày  </label>
                                     </li>
                                     <li>
                                         <input class="form-check-input" type="radio" name="Duration" id="duration3">
-                                        <label for="duration3">4 - 8 hours</label>
+                                        <label for="duration3">2 ngày </label>
                                     </li>
-                                    <li>
-                                        <input class="form-check-input" type="radio" name="Duration" id="duration4">
-                                        <label for="duration4">Fulda (+8 hours)</label>
-                                    </li>
-                                    <li>
-                                        <input class="form-check-input" type="radio" name="Duration" id="duration5">
-                                        <label for="duration5">Multi days</label>
-                                    </li>
+                                    
                                 </ul>
                             </div>
 
                             <div class="widget widget-tour" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
-                                <h6 class="widget-title">Popular Tours</h6>
+                                <h6 class="widget-title"> Tours phổ biến </h6>
                                 <div class="destination-item tour-grid style-three bgc-lighter">
                                     <div class="image">
                                         <span class="badge">10% Off</span>
@@ -178,7 +149,7 @@
                                     </div>
                                     <div class="content">
                                         <div class="destination-header">
-                                            <span class="location"><i class="fal fa-map-marker-alt"></i> Bali, Indonesia</span>
+                                            <span class="location"><i class="fal fa-map-marker-alt"></i> Vịnh Hạ Long</span>
                                             <div class="ratting">
                                                 <i class="fas fa-star"></i>
                                                 <span>(4.8)</span>
@@ -227,17 +198,17 @@
                                 <li><a href="#"><i class="far fa-list"></i></a></li>
                             </ul>
                             <div class="sort-text mb-15 me-4 me-xl-auto">
-                                34 Tours found
+                                12 Tour tìm thấy 
                             </div>
                             <div class="sort-text mb-15 me-4">
-                                Sort By
+                                Sắp xếp theo 
                             </div>
                             <select>
-                                <option value="default" selected="">Short By</option>
-                                <option value="new">Newness</option>
-                                <option value="old">Oldest</option>
-                                <option value="hight-to-low">High To Low</option>
-                                <option value="low-to-high">Low To High</option>
+                                <option value="default" selected="">Sắp xếp theo </option>
+                                <option value="new">Mới nhất </option>
+                                <option value="old">Cũ nhất </option>
+                                <option value="hight-to-low">Cao đến Thấp </option>
+                                <option value="low-to-high">Thấp đến Cao </option>
                             </select>
                         </div>
 
@@ -246,7 +217,7 @@
                                 <div class="col-xl-4 col-md-6">
                                     <div class="destination-item tour-grid style-three bgc-lighter" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
                                         <div class="image">
-                                            <span class="badge bgc-pink">Featured</span>
+                                            <span class="badge bgc-pink">Đặc điểm </span>
                                             <a href="#" class="heart"><i class="fas fa-heart"></i></a>
                                             <img src="assets/images/destinations/tour-list1.jpg" alt="Tour List">
                                         </div>
@@ -657,17 +628,17 @@
                     <div class="col-lg-6">
                         <div class="newsletter-content-part text-white rmb-55" data-aos="zoom-in-right" data-aos-duration="1500" data-aos-offset="50">
                             <div class="section-title counter-text-wrap mb-45">
-                                <h2>Subscribe Our Newsletter to Get more offer & Tips</h2>
-                                <p>One site <span class="count-text plus" data-speed="3000" data-stop="34500">0</span> most popular experience you’ll remember</p>
+                                <h2>Nhận ưu đãi & mẹo du lịch mới nhất</h2>
+                                <p>Website <span class="count-text plus" data-speed="3000" data-stop="3450">0</span>Trải nghiệm đáng nhớ nhất</p>
                             </div>
                             <form class="newsletter-form mb-15" action="#">
                                 <input id="news-email" type="email" placeholder="Email Address" required>
                                 <button type="submit" class="theme-btn bgc-secondary style-two">
-                                    <span data-hover="Subscribe">Subscribe</span>
+                                    <span data-hover="Subscribe">Đăng kí </span>
                                     <i class="fal fa-arrow-right"></i>
                                 </button>
                             </form>
-                            <p>No credit card requirement. No commitments</p>
+                             
                         </div>
                         <div class="newsletter-bg-image" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="1500" data-aos-offset="50">
                             <img src="assets/images/newsletter/newsletter-bg-image.png" alt="Newsletter">
@@ -700,51 +671,52 @@
                         <div class="col col-small" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-offset="50">
                             <div class="footer-widget footer-links ms-sm-5">
                                 <div class="footer-title">
-                                    <h5>Services</h5>
+                                    <h5>Dịch vụ </h5>
                                 </div>
                                 <ul class="list-style-three">
-                                    <li><a href="destination-details.html">Best Tour Guide</a></li>
-                                    <li><a href="destination-details.html">Tour Booking</a></li>
-                                    <li><a href="destination-details.html">Hotel Booking</a></li>
-                                    <li><a href="destination-details.html">Ticket Booking</a></li>
+                                    <li><a href="destination-details.html">Hướng dẫn viên</a></li>
+                                    <li><a href="destination-details.html">Đặt tour</a></li>
+                                    <li><a href="destination-details.html">Đặt khách sạn</a></li>
+                                    <li><a href="destination-details.html">Đặt vé</a></li>
+                                    <li><a href="destination-details.html">Dịch vụ thuê</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col col-small" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500" data-aos-offset="50">
                             <div class="footer-widget footer-links ms-md-4">
                                 <div class="footer-title">
-                                    <h5>Company</h5>
+                                    <h5>Công ty  </h5>
                                 </div>
                                 <ul class="list-style-three">
-                                    <li><a href="about.html">About Company</a></li>
-                                    <li><a href="blog.html">Community Blog</a></li>
-                                    <li><a href="contact.html">Jobs and Careers</a></li>
-                                    <li><a href="blog.html">latest News Blog</a></li>
+                                    <li><a href="about.html">Về công ty </a></li>
+                                    <li><a href="blog.html">Blog cộng đồng</a></li>
+                                    <li><a href="contact.html">Tuyển dụng</a></li>
+                                    <li><a href="blog.html">Liên lạc</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col col-small" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1500" data-aos-offset="50">
                             <div class="footer-widget footer-links ms-lg-4">
                                 <div class="footer-title">
-                                    <h5>Destinations</h5>
+                                    <h5>Điểm đến </h5>
                                 </div>
                                 <ul class="list-style-three">
-                                    <li><a href="destination-details.html">African Safaris</a></li>
-                                    <li><a href="destination-details.html">Alaska & Canada</a></li>
-                                    <li><a href="destination-details.html">South America</a></li>
-                                    <li><a href="destination-details.html">Middle East</a></li>
+                                    <li><a href="destination-details.html">Miền Bắc </a></li>
+                                    <li><a href="destination-details.html">Miền Trung </a></li>
+                                    <li><a href="destination-details.html">Miền Nam  </a></li>
+                                   
                                 </ul>
                             </div>
                         </div>
                         <div class="col col-md-6 col-10 col-small" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500" data-aos-offset="50">
                             <div class="footer-widget footer-contact">
                                 <div class="footer-title">
-                                    <h5>Get In Touch</h5>
+                                    <h5>Liên lạc </h5>
                                 </div>
                                 <ul class="list-style-one">
-                                    <li><i class="fal fa-map-marked-alt"></i> 578 Level, D-block 45 Street Melbourne, Australia</li>
+                                    <li><i class="fal fa-map-marked-alt"></i> 45 Lê Thánh Tôn, Q.1,Hồ Chí Minh</li>
                                     <li><i class="fal fa-envelope"></i> <a href="mailto:supportrevelo@gmail.com">supportrevelo @gmail.com</a></li>
-                                    <li><i class="fal fa-phone-volume"></i> <a href="callto:+88012334588">+880 (123) 345 88</a></li>
+                                    <li><i class="fal fa-phone-volume"></i> <a href="callto:+88012334588">+0358087586</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -761,10 +733,10 @@
                        </div>
                        <div class="col-lg-7 text-center text-lg-end">
                            <ul class="footer-bottom-nav">
-                               <li><a href="about.html">Terms</a></li>
-                               <li><a href="about.html">Privacy Policy</a></li>
-                               <li><a href="about.html">Legal notice</a></li>
-                               <li><a href="about.html">Accessibility</a></li>
+                               <li><a href="about.html">Điều khoản</a></li>
+                               <li><a href="about.html">Chính sách riêng tư</a></li>
+                               <li><a href="about.html">Thông báo pháp lý</a></li>
+                               <li><a href="about.html">Trợ năng</a></li>
                            </ul>
                        </div>
                     </div>

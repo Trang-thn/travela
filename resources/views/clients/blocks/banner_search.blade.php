@@ -6,7 +6,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center mb-20" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1500" data-aos-offset="50">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active">Destination</li>
+                            <li class="breadcrumb-item active">Điểm đến </li>
                         </ol>
                     </nav>
                 </div>
@@ -16,34 +16,34 @@
             <div class="search-filter-inner" data-aos="zoom-out-down" data-aos-duration="1500" data-aos-offset="50">
                 <div class="filter-item clearfix">
                     <div class="icon"><i class="fal fa-map-marker-alt"></i></div>
-                    <span class="title">Destinations</span>
+                    <span class="title">Điểm đến </span>
                     <select name="city" id="city">
-                        <option value="value1">City or Region</option>
-                        <option value="value2">City</option>
-                        <option value="value2">Region</option>
+                        <option value="value1">Miền Bắc </option>
+                        <option value="value2">Miền Trung  </option>
+                        <option value="value2">Miền Nam </option>
                     </select>
                 </div>
                 <div class="filter-item clearfix">
                     <div class="icon"><i class="fal fa-flag"></i></div>
-                    <span class="title">All Activity</span>
+                    <span class="title">Mọi hoạt động  </span>
                     <select name="activity" id="activity">
-                        <option value="value1">Choose Activity</option>
-                        <option value="value2">Daily</option>
-                        <option value="value2">Monthly</option>
+                        <option value="value1">Chọn hoạt động </option>
+                        <option value="value2">Hàng Ngày </option>
+                        <option value="value2">Hàng Tháng </option>
                     </select>
                 </div>
                 <div class="filter-item clearfix">
                     <div class="icon"><i class="fal fa-calendar-alt"></i></div>
-                    <span class="title">Departure Date</span>
+                    <span class="title">Ngày khởi hành </span>
                     <select name="date" id="date">
-                        <option value="value1">Date from</option>
+                        <option value="value1">Từ ngày </option>
                         <option value="value2">10</option>
                         <option value="value2">20</option>
                     </select>
                 </div>
                 <div class="filter-item clearfix">
                     <div class="icon"><i class="fal fa-users"></i></div>
-                    <span class="title">Guests</span>
+                    <span class="title">Khách </span>
                     <select name="cuests" id="cuests">
                         <option value="value1">0</option>
                         <option value="value2">1</option>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="search-button">
                     <button class="theme-btn">
-                        <span data-hover="Search">Search</span>
+                        <span data-hover="Search">Tìm kiếm </span>
                         <i class="far fa-search"></i>
                     </button>
                 </div>

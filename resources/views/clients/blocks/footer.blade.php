@@ -8,7 +8,7 @@
                                 <div class="footer-logo mb-25">
                                     <a href="{{ route('home') }}"><img src="assets/images/logos/logo.png" alt="Logo"></a>
                                 </div>
-                                <p>We curate bespoke itineraries tailored to your preferences, ensuring every trip is seamless and enriching hidden gems beaten</p>
+                                <p>Chúng tôi thiết kế lịch trình riêng theo nhu cầu của bạn, đảm bảo mỗi chuyến đi suôn sẻ, giàu trải nghiệm và đầy những điểm đến độc đáo.</p>
                                 <div class="social-style-one mt-15">
                                     <a href="{{ route('contact') }}"><i class="fab fa-facebook-f"></i></a>
                                     <a href="{{ route('contact') }}"><i class="fab fa-youtube"></i></a>
@@ -19,13 +19,13 @@
                         </div>
                         <div class="col-xl-5 col-lg-6" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-offset="50">
                             <div class="section-title counter-text-wrap mb-35">
-                                <h2>Subscribe Newsletter</h2>
-                                <p>One site <span class="count-text plus" data-speed="3000" data-stop="34500">0</span> most popular experience you’ll remember</p>
+                                <h2>Đăng ký bản tin</h2>
+                                <p>Website <span class="count-text plus" data-speed="3000" data-stop="34500">0</span> Trải nghiệm đáng nhớ nhất</p>
                             </div>
                             <form class="newsletter-form mb-50" action="#">
                                 <input id="news-email" type="email" placeholder="Email Address" required>
                                 <button type="submit" class="theme-btn bgc-secondary style-two">
-                                    <span data-hover="Subscribe">Subscribe</span>
+                                    <span data-hover="Subscribe">Đăng kí </span>
                                     <i class="fal fa-arrow-right"></i>
                                 </button>
                             </form>
@@ -39,69 +39,68 @@
                         <div class="col col-small" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
                             <div class="footer-widget footer-links">
                                 <div class="footer-title">
-                                    <h5>Services</h5>
+                                    <h5>Dịch vụ </h5>
                                 </div>
                                 <ul class="list-style-three">
-                                    <li><a href="destination-details.html">Best Tour Guide</a></li>
-                                    <li><a href="destination-details.html">Tour Booking</a></li>
-                                    <li><a href="destination-details.html">Hotel Booking</a></li>
-                                    <li><a href="destination-details.html">Ticket Booking</a></li>
-                                    <li><a href="destination-details.html">Rental Services</a></li>
+                                    <li><a href="destination-details.html">Hướng dẫn viên</a></li>
+                                    <li><a href="destination-details.html">Đặt tour</a></li>
+                                    <li><a href="destination-details.html">Đặt khách sạn</a></li>
+                                    <li><a href="destination-details.html">Đặt vé</a></li>
+                                    <li><a href="destination-details.html">Dịch vụ thuê</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col col-small" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-offset="50">
                             <div class="footer-widget footer-links">
                                 <div class="footer-title">
-                                    <h5>Company</h5>
+                                    <h5>Công ty </h5>
                                 </div>
                                 <ul class="list-style-three">
-                                    <li><a href="{{ route('about') }}">About Company</a></li>
-                                    <li><a href="{{ route('blogs') }}">">Community Blog</a></li>
-                                    <li><a href="{{ route('contact') }}">">Jobs and Careers</a></li>
-                                    <li><a href="{{ route('blogs') }}"></a>">latest News Blog</a></li>
-                                    <li><a href="{{ route('contact') }}"></a>">Contact Us</a></li>
+                                    <li><a href="{{ route('about') }}">Về công ty </a></li>
+                                    <li><a href="{{ route('blogs') }}">"Blog cộng đồng</a></li>
+                                    <li><a href="{{ route('contact') }}">"Tuyển dụng</a></li>
+                                    <li><a href="{{ route('blogs') }}"></a>"Tin mới nhất</a></li>
+                                    <li><a href="{{ route('contact') }}"></a>"Liên lạc </a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col col-small" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500" data-aos-offset="50">
                             <div class="footer-widget footer-links">
                                 <div class="footer-title">
-                                    <h5>Destinations</h5>
+                                    <h5>Điểm đến </h5>
                                 </div>
                                 <ul class="list-style-three">
-                                    <li><a href="destination-details.html">African Safaris</a></li>
-                                    <li><a href="destination-details.html">Alaska & Canada</a></li>
-                                    <li><a href="destination-details.html">South America</a></li>
-                                    <li><a href="destination-details.html">Middle East</a></li>
-                                    <li><a href="destination-details.html">South America</a></li>
+                                    <li><a href="destination-details.html">Miền Bắc </a></li>
+                                    <li><a href="destination-details.html">Miền Trung  </a></li>
+                                    <li><a href="destination-details.html">Miền Nam </a></li>
+                                     
                                 </ul>
                             </div>
                         </div>
                         <div class="col col-small" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1500" data-aos-offset="50">
                             <div class="footer-widget footer-links">
                                 <div class="footer-title">
-                                    <h5>Categories</h5>
+                                    <h5>Danh mục </h5>
                                 </div>
                                 <ul class="list-style-three">
-                                    <li><a href="{{ route('contact') }}">Adventure</a></li>
-                                    <li><a href="{{ route('contact') }}">Hiking & Trekking</a></li>
-                                    <li><a href="{{ route('contact') }}">Cycling Tours</a></li>
-                                    <li><a href="{{ route('contact') }}">Family Tours</a></li>
-                                    <li><a href="{{ route('contact') }}">Wildlife Tours</a></li>
+                                    <li><a href="{{ route('contact') }}">Phiêu lưu</a></li>
+                                    <li><a href="{{ route('contact') }}">Trekking</a></li>
+                                    <li><a href="{{ route('contact') }}">Du lịch xe đạp</a></li>
+                                    <li><a href="{{ route('contact') }}">Gia đình</a></li>
+                                    
                                 </ul>
                             </div>
                         </div>
                         <div class="col col-md-6 col-10 col-small" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1500" data-aos-offset="50">
                             <div class="footer-widget footer-contact">
                                 <div class="footer-title">
-                                    <h5>Get In Touch</h5>
+                                    <h5>Liên lạc </h5>
                                 </div>
                                 <ul class="list-style-one">
-                                    <li><i class="fal fa-map-marked-alt"></i> 578 Level, D-block 45 Street Melbourne, Australia</li>
+                                    <li><i class="fal fa-map-marked-alt"></i> 45 Lê Thánh Tôn, Q.1,Hồ Chí Minh</li>
                                     <li><i class="fal fa-envelope"></i> <a href="mailto:supportrevelo@gmail.com">supportrevelo@gmail.com</a></li>
-                                    <li><i class="fal fa-clock"></i> Mon - Fri, 08am - 05pm</li>
-                                    <li><i class="fal fa-phone-volume"></i> <a href="callto:+88012334588">+880 (123) 345 88</a></li>
+                                    <li><i class="fal fa-clock"></i>Thứ 2 – Thứ 6, 08:00 – 17:00</li>
+                                    <li><i class="fal fa-phone-volume"></i> <a href="callto:+88012334588">+0358087586</a></li>
                                 </ul>
                             </div>
                         </div>

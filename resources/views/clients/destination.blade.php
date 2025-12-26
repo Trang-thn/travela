@@ -7,14 +7,14 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
                         <div class="section-title text-center counter-text-wrap mb-40" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
-                            <h2>Explore Popular Destinations</h2>
-                            <p>One site <span class="count-text plus" data-speed="3000" data-stop="34500">0</span> most popular experience</p>
+                            <h2>Khám phá điểm đến phổ biến nhất </h2>
+                            <p>Website <span class="count-text plus" data-speed="3000" data-stop="34500">0</span> Trải nghiệm đáng nhớ nhất</p>
                             <ul class="destinations-nav mt-30">
-                                <li data-filter="*" class="active">Show All</li>
-                                <li data-filter=".features">Features</li>
-                                <li data-filter=".recent">Recent</li>
-                                <li data-filter=".city">City</li>
-                                <li data-filter=".rating">Rating</li>
+                                <li data-filter="*" class="active">Tất cả </li>
+                                <li data-filter=".features">Đặc điểm </li>
+                                <li data-filter=".recent">gần đây </li>
+                                <li data-filter=".city">Thành phố </li>
+                                <li data-filter=".rating">Đánh giá </li>
                             </ul>
                         </div>
                     </div>
@@ -113,11 +113,11 @@
                     <div class="col-xl-4">
                         <div class="destination-left-content mb-35">
                             <div class="section-title text-white counter-text-wrap mb-45" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
-                                <h2>Discover the World's Class Top Hotel</h2>
-                                <p>One site <span class="count-text plus" data-speed="3000" data-stop="34500">0</span> most popular <br> experience you’ll remember</p>
+                                <h2>Khám phá khách sạn hàng đầu Việt Nam </h2>
+                                <p>Website <span class="count-text plus" data-speed="3000" data-stop="34500">0</span> Trải nghiệm phổ biến nhất <br> mà bạn sẽ nhớ mãi</p>
                             </div>
                             <a href="destination1.html" class="theme-btn style-four mb-15">
-                                <span data-hover="Explore More Hotel">Explore More Hotel</span>
+                                <span data-hover="Explore More Hotel">Khám phá khách sạn </span>
                                 <i class="fal fa-arrow-right"></i>
                             </a>
                         </div>
@@ -220,8 +220,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
                         <div class="section-title text-center counter-text-wrap mb-50" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
-                            <h2>Discover Hot Deals</h2>
-                            <p>One site <span class="count-text plus" data-speed="3000" data-stop="34500">0</span> most popular experience you’ll remember</p>
+                            <h2>Khám phá các ưu đãi hấp dẫn</h2>
+                            <p>Website <span class="count-text plus" data-speed="3000" data-stop="34500">0</span>Trải nghiệm đáng nhớ nhất</p>
                         </div>
                     </div>
                 </div>
@@ -248,7 +248,7 @@
                                 </div>
                             </div>
                             <a href="destination-details.html" class="theme-btn style-three">
-                                <span data-hover="Explore">Explore</span>
+                                <span data-hover="Explore">Khám phá</span>
                                 <i class="fal fa-arrow-right"></i>
                             </a>
                         </div>
@@ -275,7 +275,7 @@
                                 </div>
                             </div>
                             <a href="destination-details.html" class="theme-btn style-three">
-                                <span data-hover="Explore">Explore</span>
+                                <span data-hover="Explore">Khám phá</span>
                                 <i class="fal fa-arrow-right"></i>
                             </a>
                         </div>
@@ -302,7 +302,7 @@
                                 </div>
                             </div>
                             <a href="destination-details.html" class="theme-btn style-three">
-                                <span data-hover="Explore">Explore</span>
+                                <span data-hover="Explore">Khám phá</span>
                                 <i class="fal fa-arrow-right"></i>
                             </a>
                         </div>
@@ -320,17 +320,17 @@
                     <div class="col-lg-6">
                         <div class="newsletter-content-part text-white rmb-55" data-aos="zoom-in-right" data-aos-duration="1500" data-aos-offset="50">
                             <div class="section-title counter-text-wrap mb-45">
-                                <h2>Subscribe Our Newsletter to Get more offer & Tips</h2>
-                                <p>One site <span class="count-text plus" data-speed="3000" data-stop="34500">0</span> most popular experience you’ll remember</p>
+                                <h2>Đăng ký nhận ưu đãi và mẹo du lịch hữu ích.</h2>
+                                <p>Website<span class="count-text plus" data-speed="3000" data-stop="34500">0</span> Trải nghiệm đáng nhớ nhất</p>
                             </div>
                             <form class="newsletter-form mb-15" action="#">
                                 <input id="news-email" type="email" placeholder="Email Address" required>
                                 <button type="submit" class="theme-btn bgc-secondary style-two">
-                                    <span data-hover="Subscribe">Subscribe</span>
+                                    <span data-hover="Subscribe">Đăng kí </span>
                                     <i class="fal fa-arrow-right"></i>
                                 </button>
                             </form>
-                            <p>No credit card requirement. No commitments</p>
+                             
                         </div>
                         <div class="newsletter-bg-image" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="1500" data-aos-offset="50">
                             <img src="assets/images/newsletter/newsletter-bg-image.png" alt="Newsletter">

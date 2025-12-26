@@ -264,8 +264,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
                         <div class="section-title text-white text-center counter-text-wrap mb-70" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
-                            <h2>Discover the World's Class Top Hotel</h2>
-                            <p>One site <span class="count-text plus" data-speed="3000" data-stop="34500">0</span> most popular experience you’ll remember</p>
+                            <h2>Khám phá những khách sạn hàng đầu Việt Nam</h2>
+                            <p>Website <span class="count-text plus" data-speed="3000" data-stop="34500">0</span> Trải nghiệm đáng nhớ nhất</p>
                         </div>
                     </div>
                 </div>
@@ -385,13 +385,13 @@
                         <div class="col-lg-7">
                             <div class="testimonial-right-content" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="50">
                                 <div class="section-title mb-55">
-                                    <h2><span>5280</span>  Global Clients Say About Us Services</h2>
+                                    <h2><span>534</span>  Khách hàng nói gì về dịch vụ của chúng tôi?</h2>
                                 </div>
                                 <div class="testimonials-active">
                                     <div class="testimonial-item">
                                         <div class="testi-header">
                                             <div class="quote"><i class="flaticon-double-quotes"></i></div>
-                                            <h4>Quality Services</h4>
+                                            <h4>Chất lượng dịch vụ </h4>
                                             <div class="ratting">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -400,19 +400,19 @@
                                                 <i class="fas fa-star"></i>
                                             </div>
                                         </div>
-                                        <div class="text">"Our trip was absolutely a perfect, thanks this travel agency! They took care of every detail, from to accommodations, and even suggested incredible experiences"</div>
+                                        <div class="text">"Chuyến đi của chúng tôi thật sự hoàn hảo. Mọi chi tiết đều được sắp xếp chu đáo, cùng nhiều trải nghiệm tuyệt vời."</div>
                                         <div class="author">
                                             <div class="image"><img src="assets/images/testimonials/author.jpg" alt="Author"></div>
                                             <div class="content">
-                                                <h5>Randall V. Vasquez</h5>
-                                                <span>Graphics Designer</span>
+                                                <h5>Ms Hải Anh</h5>
+                                                <span>Hoạ sĩ </span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="testimonial-item">
                                         <div class="testi-header">
                                             <div class="quote"><i class="flaticon-double-quotes"></i></div>
-                                            <h4>Quality Services</h4>
+                                            <h4>Chất lượng dịch vụ </h4>
                                             <div class="ratting">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -421,14 +421,8 @@
                                                 <i class="fas fa-star"></i>
                                             </div>
                                         </div>
-                                        <div class="text">"Our trip was absolutely a perfect, thanks this travel agency! They took care of every detail, from to accommodations, and even suggested incredible experiences"</div>
-                                        <div class="author">
-                                            <div class="image"><img src="assets/images/testimonials/author.jpg" alt="Author"></div>
-                                            <div class="content">
-                                                <h5>Randall V. Vasquez</h5>
-                                                <span>Graphics Designer</span>
-                                            </div>
-                                        </div>
+                                        <div class="text">"Chuyến đi của chúng tôi thật sự hoàn hảo. Mọi chi tiết đều được sắp xếp chu đáo, cùng nhiều trải nghiệm tuyệt vời."</div>
+                                         
                                     </div>
                                 </div>
                             </div>

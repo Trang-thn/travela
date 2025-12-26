@@ -92,7 +92,7 @@
                         <div class="nav-search">
                             <button class="far fa-search"></button>
                             <form action="#" class="hide">
-                                <input type="text" placeholder="Search" class="searchbox" required="">
+                                <input type="text" placeholder="Tìm kiếm " class="searchbox" required="">
                                 <button type="submit" class="searchbutton far fa-search"></button>
                             </form>
                         </div>
@@ -100,7 +100,7 @@
                         <!-- Menu Button -->
                         <div class="menu-btns py-10">
                             <a href="{{ route('contact') }}" class="theme-btn style-two bgc-secondary">
-                                <span data-hover="Book Now">Book Now</span>
+                                <span data-hover="Book Now">Đặt ngay</span>
                                 <i class="fal fa-arrow-right"></i>
                             </a>
                             <!-- menu sidbar -->

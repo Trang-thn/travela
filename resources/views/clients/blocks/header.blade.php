@@ -99,7 +99,7 @@
                         <!-- Menu Button -->
                         <div class="menu-btns py-10">
                             <a href="{{ route('contact') }}" class="theme-btn style-two bgc-secondary">
-                                <span data-hover="Book Now">Book Now</span>
+                                <span data-hover="Book Now">Đặt ngay</span>
                                 <i class="fal fa-arrow-right"></i>
                             </a>
                             <!-- menu sidbar -->
