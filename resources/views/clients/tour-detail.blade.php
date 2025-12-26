@@ -526,7 +526,8 @@
 
                             <div class="widget widget-booking" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
                                 <h5 class="widget-title">Tour Booking</h5>
-                                <form action="#">
+                                <form action="#" method="POST">
+                                    @csrf
                                     <div class="date mb-25">
                                         <b>From Date</b>
                                         <input type="date">
@@ -580,8 +581,10 @@
                                     <hr>
                                     <h6>Total: <span class="price">$74</span></h6>
                                     <button type="submit" class="theme-btn style-two w-100 mt-15 mb-5">
+                                        <a href="{{ route('booking') }}">
                                         <span data-hover="Book Now">Book Now</span>
                                         <i class="fal fa-arrow-right"></i>
+                                        </a>
                                     </button>
                                     <div class="text-center">
                                         <a href="contact.html">Need some help?</a>

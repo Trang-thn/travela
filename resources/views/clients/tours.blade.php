@@ -155,7 +155,7 @@
                                                 <span>(4.8)</span>
                                             </div>
                                         </div>
-                                        <h6><a href="tour-details.html">Relinking Beach, Bali, Indonesia</a></h6>
+                                        <h6><a href="{{route('tour-detail')}}">Relinking Beach, Bali, Indonesia</a></h6>
                                     </div>
                                 </div>
                                 <div class="destination-item tour-grid style-three bgc-lighter">
@@ -170,7 +170,7 @@
                                                 <span>(4.8)</span>
                                             </div>
                                         </div>
-                                        <h6><a href="tour-details.html">Relinking Beach, Bali, Indonesia</a></h6>
+                                        <h6><a href="{{route('tour-detail')}}">Relinking Beach, Bali, Indonesia</a></h6>
                                     </div>
                                 </div>
                             </div>
@@ -232,14 +232,14 @@
                                                     <i class="fas fa-star"></i>
                                                 </div>
                                             </div>
-                                            <h6><a href="tour-details.html">Bay Cruise trip by Boat's in Bali, Indonesia</a></h6>
+                                            <h6><a href="{{route('tour-detail')}}">Bay Cruise trip by Boat's in Bali, Indonesia</a></h6>
                                             <ul class="blog-meta">
                                                 <li><i class="far fa-clock"></i> 3 days 2 nights</li>
                                                 <li><i class="far fa-user"></i> 5-8 guest</li>
                                             </ul>
                                             <div class="destination-footer">
                                                 <span class="price"><span>$58.00</span>/person</span>
-                                                <a href="tour-details.html" class="theme-btn style-two style-three">
+                                                <a href="{{route('tour-detail')}}" class="theme-btn style-two style-three">
                                                     <i class="fal fa-arrow-right"></i>
                                                 </a>
                                             </div>
@@ -263,14 +263,14 @@
                                                     <i class="fas fa-star"></i>
                                                 </div>
                                             </div>
-                                            <h6><a href="tour-details.html">Buenos Aires, Calafate & Ushuaia, Rome, Italy</a></h6>
+                                            <h6><a href="{{route('tour-detail')}}">Buenos Aires, Calafate & Ushuaia, Rome, Italy</a></h6>
                                             <ul class="blog-meta">
                                                 <li><i class="far fa-clock"></i> 3 days 2 nights</li>
                                                 <li><i class="far fa-user"></i> 5-8 guest</li>
                                             </ul>
                                             <div class="destination-footer">
                                                 <span class="price"><span>$58.00</span>/person</span>
-                                                <a href="tour-details.html" class="theme-btn style-two style-three">
+                                                <a href="{{route('tour-detail')}}" class="theme-btn style-two style-three">
                                                     <i class="fal fa-arrow-right"></i>
                                                 </a>
                                             </div>
@@ -294,14 +294,14 @@
                                                     <i class="fas fa-star"></i>
                                                 </div>
                                             </div>
-                                            <h6><a href="tour-details.html">Bay Cruise lake trip by Boat in Bali, Indonesia</a></h6>
+                                            <h6><a href="{{route('tour-detail')}}">Bay Cruise lake trip by Boat in Bali, Indonesia</a></h6>
                                             <ul class="blog-meta">
                                                 <li><i class="far fa-clock"></i> 3 days 2 nights</li>
                                                 <li><i class="far fa-user"></i> 5-8 guest</li>
                                             </ul>
                                             <div class="destination-footer">
                                                 <span class="price"><span>$58.00</span>/person</span>
-                                                <a href="tour-details.html" class="theme-btn style-two style-three">
+                                                <a href="{{route('tour-detail')}}" class="theme-btn style-two style-three">
                                                     <i class="fal fa-arrow-right"></i>
                                                 </a>
                                             </div>
@@ -325,14 +325,14 @@
                                                     <i class="fas fa-star"></i>
                                                 </div>
                                             </div>
-                                            <h6><a href="tour-details.html">Buenos Aires, Calafate & Ushuaia, Rome, Italy</a></h6>
+                                            <h6><a href="{{route('tour-detail')}}">Buenos Aires, Calafate & Ushuaia, Rome, Italy</a></h6>
                                             <ul class="blog-meta">
                                                 <li><i class="far fa-clock"></i> 3 days 2 nights</li>
                                                 <li><i class="far fa-user"></i> 5-8 guest</li>
                                             </ul>
                                             <div class="destination-footer">
                                                 <span class="price"><span>$58.00</span>/person</span>
-                                                <a href="tour-details.html" class="theme-btn style-two style-three">
+                                                <a href="{{route('tour-detail')}}" class="theme-btn style-two style-three">
                                                     <i class="fal fa-arrow-right"></i>
                                                 </a>
                                             </div>
@@ -357,14 +357,14 @@
                                                     <i class="fas fa-star"></i>
                                                 </div>
                                             </div>
-                                            <h6><a href="tour-details.html">Buenos Aires, Calafate & Ushuaia, Rome, Italy</a></h6>
+                                            <h6><a href="{{route('tour-detail')}}">Buenos Aires, Calafate & Ushuaia, Rome, Italy</a></h6>
                                             <ul class="blog-meta">
                                                 <li><i class="far fa-clock"></i> 3 days 2 nights</li>
                                                 <li><i class="far fa-user"></i> 5-8 guest</li>
                                             </ul>
                                             <div class="destination-footer">
                                                 <span class="price"><span>$58.00</span>/person</span>
-                                                <a href="tour-details.html" class="theme-btn style-two style-three">
+                                                <a href="{{route('tour-detail')}}" class="theme-btn style-two style-three">
                                                     <i class="fal fa-arrow-right"></i>
                                                 </a>
                                             </div>
@@ -389,14 +389,14 @@
                                                     <i class="fas fa-star"></i>
                                                 </div>
                                             </div>
-                                            <h6><a href="tour-details.html">Bay Cruise lake trip by Boat in Bali, Indonesia</a></h6>
+                                            <h6><a href="{{route('tour-detail')}}">Bay Cruise lake trip by Boat in Bali, Indonesia</a></h6>
                                             <ul class="blog-meta">
                                                 <li><i class="far fa-clock"></i> 3 days 2 nights</li>
                                                 <li><i class="far fa-user"></i> 5-8 guest</li>
                                             </ul>
                                             <div class="destination-footer">
                                                 <span class="price"><span>$58.00</span>/person</span>
-                                                <a href="tour-details.html" class="theme-btn style-two style-three">
+                                                <a href="{{route('tour-detail')}}" class="theme-btn style-two style-three">
                                                     <i class="fal fa-arrow-right"></i>
                                                 </a>
                                             </div>
@@ -421,14 +421,14 @@
                                                     <i class="fas fa-star"></i>
                                                 </div>
                                             </div>
-                                            <h6><a href="tour-details.html">Buenos Aires, Calafate & Ushuaia, Rome, Italy</a></h6>
+                                            <h6><a href="{{route('tour-detail')}}">Buenos Aires, Calafate & Ushuaia, Rome, Italy</a></h6>
                                             <ul class="blog-meta">
                                                 <li><i class="far fa-clock"></i> 3 days 2 nights</li>
                                                 <li><i class="far fa-user"></i> 5-8 guest</li>
                                             </ul>
                                             <div class="destination-footer">
                                                 <span class="price"><span>$58.00</span>/person</span>
-                                                <a href="tour-details.html" class="theme-btn style-two style-three">
+                                                <a href="{{route('tour-detail')}}" class="theme-btn style-two style-three">
                                                     <i class="fal fa-arrow-right"></i>
                                                 </a>
                                             </div>
@@ -452,14 +452,14 @@
                                                     <i class="fas fa-star"></i>
                                                 </div>
                                             </div>
-                                            <h6><a href="tour-details.html">Buenos Aires, Calafate & Ushuaia, Rome, Italy</a></h6>
+                                            <h6><a href="{{route('tour-detail')}}">Buenos Aires, Calafate & Ushuaia, Rome, Italy</a></h6>
                                             <ul class="blog-meta">
                                                 <li><i class="far fa-clock"></i> 3 days 2 nights</li>
                                                 <li><i class="far fa-user"></i> 5-8 guest</li>
                                             </ul>
                                             <div class="destination-footer">
                                                 <span class="price"><span>$58.00</span>/person</span>
-                                                <a href="tour-details.html" class="theme-btn style-two style-three">
+                                                <a href="{{route('tour-detail')}}" class="theme-btn style-two style-three">
                                                     <i class="fal fa-arrow-right"></i>
                                                 </a>
                                             </div>
@@ -484,14 +484,14 @@
                                                     <i class="fas fa-star"></i>
                                                 </div>
                                             </div>
-                                            <h6><a href="tour-details.html">Bay Cruise lake trip by Boat in Bali, Indonesia</a></h6>
+                                            <h6><a href="{{route('tour-detail')}}">Bay Cruise lake trip by Boat in Bali, Indonesia</a></h6>
                                             <ul class="blog-meta">
                                                 <li><i class="far fa-clock"></i> 3 days 2 nights</li>
                                                 <li><i class="far fa-user"></i> 5-8 guest</li>
                                             </ul>
                                             <div class="destination-footer">
                                                 <span class="price"><span>$58.00</span>/person</span>
-                                                <a href="tour-details.html" class="theme-btn style-two style-three">
+                                                <a href="{{route('tour-detail')}}" class="theme-btn style-two style-three">
                                                     <i class="fal fa-arrow-right"></i>
                                                 </a>
                                             </div>
@@ -515,14 +515,14 @@
                                                     <i class="fas fa-star"></i>
                                                 </div>
                                             </div>
-                                            <h6><a href="tour-details.html">Buenos Aires, Calafate & Ushuaia, Rome, Italy</a></h6>
+                                            <h6><a href="{{route('tour-detail')}}">Buenos Aires, Calafate & Ushuaia, Rome, Italy</a></h6>
                                             <ul class="blog-meta">
                                                 <li><i class="far fa-clock"></i> 3 days 2 nights</li>
                                                 <li><i class="far fa-user"></i> 5-8 guest</li>
                                             </ul>
                                             <div class="destination-footer">
                                                 <span class="price"><span>$58.00</span>/person</span>
-                                                <a href="tour-details.html" class="theme-btn style-two style-three">
+                                                <a href="{{route('tour-detail')}}" class="theme-btn style-two style-three">
                                                     <i class="fal fa-arrow-right"></i>
                                                 </a>
                                             </div>
@@ -547,14 +547,14 @@
                                                     <i class="fas fa-star"></i>
                                                 </div>
                                             </div>
-                                            <h6><a href="tour-details.html">Buenos Aires, Calafate & Ushuaia, Rome, Italy</a></h6>
+                                            <h6><a href="{{route('tour-detail')}}">Buenos Aires, Calafate & Ushuaia, Rome, Italy</a></h6>
                                             <ul class="blog-meta">
                                                 <li><i class="far fa-clock"></i> 3 days 2 nights</li>
                                                 <li><i class="far fa-user"></i> 5-8 guest</li>
                                             </ul>
                                             <div class="destination-footer">
                                                 <span class="price"><span>$58.00</span>/person</span>
-                                                <a href="tour-details.html" class="theme-btn style-two style-three">
+                                                <a href="{{route('tour-detail')}}" class="theme-btn style-two style-three">
                                                     <i class="fal fa-arrow-right"></i>
                                                 </a>
                                             </div>
@@ -578,14 +578,14 @@
                                                     <i class="fas fa-star"></i>
                                                 </div>
                                             </div>
-                                            <h6><a href="tour-details.html">Bay Cruise lake trip by Boat in Bali, Indonesia</a></h6>
+                                            <h6><a href="{{route('tour-detail')}}">Bay Cruise lake trip by Boat in Bali, Indonesia</a></h6>
                                             <ul class="blog-meta">
                                                 <li><i class="far fa-clock"></i> 3 days 2 nights</li>
                                                 <li><i class="far fa-user"></i> 5-8 guest</li>
                                             </ul>
                                             <div class="destination-footer">
                                                 <span class="price"><span>$58.00</span>/person</span>
-                                                <a href="tour-details.html" class="theme-btn style-two style-three">
+                                                <a href="{{route('tour-detail')}}" class="theme-btn style-two style-three">
                                                     <i class="fal fa-arrow-right"></i>
                                                 </a>
                                             </div>
