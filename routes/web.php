@@ -10,6 +10,7 @@ use App\Http\Controllers\clients\ContactController;
 use App\Http\Controllers\clients\TourDetailController;
 use App\Http\Controllers\clients\BlogController;
 use App\Http\Controllers\clients\BlogDetailController;
+use App\Http\Controllers\clients\LoginController;
 
 
 // Route::get('/', function () {
@@ -24,3 +25,5 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::get('/tour-detail', [TourDetailController::class, 'index'])->name('tour-detail');
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
 Route::get('/blog-detail', [BlogDetailController::class, 'index'])->name('blog-detail');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'register'])->name('register');
