@@ -15,7 +15,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 
-    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
     <!-- Flaticon -->
     <link rel="stylesheet" href="{{ asset('assets/css/flaticon.min.css') }}">
@@ -135,6 +135,16 @@
                                     </ul>
                                 </li>
                             </div>
+                    {{-- <div class="dropdown">
+                        <button class="dropdown-toggle bg-transparent" id="userDropdown" style="font-size: 34px;color:aliceblue">
+                             <i class="bx bxs-user bx-tada icon-user"></i>
+                         </button>
+                    <ul class="dropdown-menu" id="dropdownMenu" style="display: none">
+                         <li><a href="{{ route('login') }}">Đăng nhập</a></li>
+                         <li><a href="#">Thông tin cá nhân</a></li>
+                    </ul>
+                </div> --}}
+            </div>
                         </div>
                     </div>
                 </div>

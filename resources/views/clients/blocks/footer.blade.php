@@ -161,13 +161,12 @@
     <script src="assets/js/aos.js"></script>
     <!-- Custom script -->
     <script src="assets/js/script.js"></script>
+    <!-- Custom script by Trang -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
-
-
-
-    {{-- <!-- Custom script by Trang -->
-    <script src="{{ asset('clients/assets/js/custom-js.js') }}"></script> --}}
+    <!-- Custom script by Trang -->
+    <script src="{{ asset('clients/assets/js/custom-js.js') }}"></script>
 
 
 
