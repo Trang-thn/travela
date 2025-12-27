@@ -162,7 +162,14 @@
     <!-- Custom script -->
     <script src="assets/js/script.js"></script>
     <!-- Custom script by Trang -->
-    <script src="{{ asset('clients/assets/js/custom-js.js') }}"></script>
+    
+     
+     
+
+
+   
+    
+
 
 </body>
 

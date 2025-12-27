@@ -1,4 +1,4 @@
-        <!-- Hero Area Start -->
+<!-- Hero Area Start -->
         <section class="hero-area bgc-black pt-200 rpt-120 rel z-2">
             <div class="container-fluid">
                 <h1 class="hero-title" data-aos="flip-up" data-aos-delay="50" data-aos-duration="1500" data-aos-offset="50">Du lịch & Tour</h1>
@@ -19,13 +19,16 @@
                     <div class="filter-item clearfix">
                         <div class="icon"><i class="fal fa-calendar-alt"></i></div>
                         <span class="title">Ngày khởi hành</span>
-                        <input type="text" id="start_date" name="start_date" class="datetimepicker datetimepicker-custom" placeholder="Chọn ngày khởi hành">
+                        <input type ="date" id ="start_date" name ="start_date" class="duration"placeholder="Chọn ngày đi ">
                     </div>
                     <div class="filter-item clearfix">
                         <div class="icon"><i class="fal fa-calendar-alt"></i></div>
-                        <span class="title">Ngày kết thúc</span>
-                        <input type="text" id="end_date" name="end_date" class="datetimepicker datetimepicker-custom" placeholder="Chọn ngày kết thúc">
+                        <span class="title">Ngày kết thúc </span>
+                        <input type ="date" id ="end_date" name ="end_date" class="duration"placeholder="Chọn ngày về ">
                     </div>
+
+
+
                     <div class="search-button">
                         <button class="theme-btn">
                             <span data-hover="Search">Tìm kiếm </span>

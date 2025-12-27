@@ -15,6 +15,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <!-- Flaticon -->
     <link rel="stylesheet" href="{{ asset('assets/css/flaticon.min.css') }}">
     <!-- Font Awesome -->
@@ -103,11 +104,9 @@
                                 <i class="fal fa-arrow-right"></i>
                             </a>
                             <!-- menu sidbar -->
-                            <div class="menu-sidebar">
-                                <button class="bg-transparent">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
+                             <div class="menu-sidebar">
+                                <button class="bg-transparent" style="font-size: 34px">
+                                   <i class="bx bxs-user bx-tada "></i>
                                 </button>
                             </div>
                         </div>
