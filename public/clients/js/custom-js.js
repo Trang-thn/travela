@@ -10,4 +10,14 @@ $(document).ready(function () {
     });
 
      
+    $("#userDropdown").click(function () {
+      $("#dropdownMenu").toggle();
+    
+  });
+  $(document).click(function (e) {
+      if (!$(e.target).closest('.dropdown').length) {
+        $("#dropdownMenu").hide();
+      }
+    });
+
 });

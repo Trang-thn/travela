@@ -32,6 +32,9 @@
     <link rel="stylesheet" href="{{ asset('/css/slick.min.css') }}">
     <!-- Main Style -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('clients/css/custom-css.css') }}">
+    
+
 
 
     {{-- login --}}
@@ -40,6 +43,8 @@
 
     <!-- Main css -->
     <link rel="stylesheet" href="{{ asset('clients/assets/css/css-login/style.css') }}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
 
 </head>
 <body>
@@ -103,15 +108,21 @@
                                 <span data-hover="Book Now">Đặt ngay</span>
                                 <i class="fal fa-arrow-right"></i>
                             </a>
-                            <!-- menu sidbar -->
-                             <div class="menu-sidebar">
-                                <button class="bg-transparent" style="font-size: 34px">
-                                   <i class="bx bxs-user bx-tada "></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                            <!-- menu sidebar -->
+                <div class="menu-sidebar">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle bg-transparent" id="userDropdown" style="font-size: 34px">
+                             <i class="bx bxs-user bx-tada icon-user"></i>
+                         </button>
+                    <ul class="dropdown-menu" id="dropdownMenu" style="display: none">
+                         <li><a href="{{ route('login') }}">Đăng nhập</a></li>
+                         <li><a href="#">Thông tin cá nhân</a></li>
+                    </ul>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+    </div>
             <!--End Header Upper-->
-        </header>
+    </header>
