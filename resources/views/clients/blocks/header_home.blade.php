@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="vi">
 
 <head>
     <!-- Required meta tags -->
@@ -14,6 +14,8 @@
     <link rel="shortcut icon" href="{{ asset('assets/images/logos/favicon.png') }}" type="image/x-icon">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
 
     <!-- Flaticon -->
     <link rel="stylesheet" href="{{ asset('assets/css/flaticon.min.css') }}">
@@ -31,6 +33,12 @@
     <link rel="stylesheet" href="{{ asset('/css/slick.min.css') }}">
     <!-- Main Style -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+     <!-- datetimepiker-->
+    
+    <!-- custom-css -->
+    <link rel="stylesheet" href="{{ asset('clients/css/custom-css.css') }}">
+
+
 
 </head>
 <body>
@@ -92,23 +100,21 @@
                         <div class="nav-search">
                             <button class="far fa-search"></button>
                             <form action="#" class="hide">
-                                <input type="text" placeholder="Tìm kiếm " class="searchbox" required="">
+                                <input type="text" placeholder="search " class="searchbox" required="">
                                 <button type="submit" class="searchbutton far fa-search"></button>
                             </form>
                         </div>
 
                         <!-- Menu Button -->
                         <div class="menu-btns py-10">
-                            <a href="{{ route('contact') }}" class="theme-btn style-two bgc-secondary">
+                            <a href="{{ route('tours') }}" class="theme-btn style-two bgc-secondary">
                                 <span data-hover="Book Now">Đặt ngay</span>
                                 <i class="fal fa-arrow-right"></i>
                             </a>
                             <!-- menu sidbar -->
                             <div class="menu-sidebar">
-                                <button class="bg-transparent">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
+                                <button class="bg-transparent" style="font-size: 34px;color: white">
+                                   <i class="bx bxs-user bx-tada "></i>
                                 </button>
                             </div>
                         </div>
