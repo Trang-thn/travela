@@ -84,7 +84,8 @@ class LoginController extends Controller
             return response()->json(['success' => true, 'message' => 'Đăng nhập thành công!', 'redirect' => route('home')]);
         }
         else{
-            return redirect()->route('login');
+            return response()->json(['success' => false, 'message' => 'Tên đăng nhập hoặc mật khẩu không đúng!']);
+
         }
     }
 

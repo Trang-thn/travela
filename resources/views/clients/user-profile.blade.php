@@ -3,7 +3,6 @@
         <div class="container-xl px-4 mt-4">
         <div class="row">
             <div class="col-xl-4">
-
                 <div class="card mb-4 mb-xl-0">
                     <div class="card-header">Ảnh đại diện</div>
                     <div class="card-body text-center">
@@ -14,10 +13,12 @@
                         <div class="small font-italic text-muted mb-4">JPG hoặc PNG không lớn hơn 5 MB</div>
 
                         <button class="btn btn-primary" type="button">Tải ảnh mới</button>
+                        <div class="card-body text-center">
+
+                            <button class="btn btn-primary" type="submit" id="update_password_profile">Đổi mật khẩu</button>
+
                     </div>
-                    <diV>
-                        <button> Đổi mật khẩu</button>
-                    </diV>
+                    </div>
                 </div>
             </div>
             <div class="col-xl-8">
@@ -54,27 +55,31 @@
                                         placeholder="Số điện thoại" value="{{ $user->phoneNumber }}" required>
                                 </div>
                             </div>
-                            <button class="btn btn-primary" type="submit" id="update-profile">Lưu</button>
+                            <button class="btn btn-primary" type="submit" id="update-profile">Lưu thông tin</button>
                         </form>
                     </div>
                 </div>
-                                    <div class="card mb-4 row">
-                        <div class="card-body text-center">
+                <div class="card mb-4">
+                    <div class="card-body" id="card_change_password">
+                        <div class="invalid-feedback" style="margin-top: -15px" id="validate_password"></div>
+                        <form action="{{ route('change-password') }}" method="POST" class="change_password_profile">
+                            @csrf
+                            <div class="row gx-3">
                             <div class="col-md-4">
-                                <label class="small mb-1" for="inputUsername">Mật khẩu hiện tại</label>
-                                <input class="form-control" id="inputUsername" type="text" placeholder="Nhập mật khẩu cũ"
-                                    value="">
+                                <input class="form-control" id="inputOldPass" type="text" placeholder="Nhập mật khẩu cũ"
+                                    value="" required>
                             </div>
                             <div class="col-md-4">
-                                <label class="small mb-1" for="inputUsername">Mật khẩu mới</label>
-                                <input class="form-control" id="inputUsername" type="text" placeholder="Nhập mật khẩu mới"
-                                    value="">
+                                <input class="form-control" id="inputNewPass" type="text" placeholder="Nhập mật khẩu mới"
+                                    value="" required>
                             </div>
                             <div class="col-md-4">
-                            <button class="btn btn-primary" type="button">Thay đổi mật khẩu</button>
+                            <button class="btn btn-primary" type="submit">Thay đổi</button>
                             </div>
                         </div>
+                        </form>
                     </div>
+                </div>
             </div>
         </div>
     </div>

@@ -1,0 +1,48 @@
+ .duration{
+    padding:0%;
+
+ }
+
+ /* Dropdown menu hidden by default */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 160px;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background:#64A828;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block !important;
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+#card_change_password{
+    display: none;
+}

@@ -8,8 +8,13 @@ $(document).ready(function() {
         $('.signup').hide();
         $('.sign-in').show();
     });
+
+
+
     $('#message').hide();
     $('#error').hide();
+    $('#error_login').hide();
+
     //handle form submission
     $('#login-form').on('submit', function(e) {
         e.preventDefault();
@@ -54,8 +59,7 @@ $(document).ready(function() {
                     if(response.success) {
                         window.location.href = "/";
                     } else {
-                        $('#error').show().text(response.message);
-                        $('#message').hide();
+                        $('#error_login').show().text(response.message);
                     }
                 },
                 error: function(xhr, textStatus, errorThrown) {
@@ -136,7 +140,7 @@ $(document).ready(function() {
         }
     });
 
-        //  USER PROFILE
+    //  USER PROFILE
     $(".updateUser").on("submit", function (e) {
         e.preventDefault();
         var fullName = $("#inputFullName").val();
@@ -162,8 +166,78 @@ $(document).ready(function() {
             },
             error: function(xhr, textStatus, errorThrown) {
                 alert('Có lỗi xảy ra khi cập nhật thông tin!');
-            }
+            },
         });
     });
+
+    $('#update_password_profile').click( function () {
+        $("#card_change_password").toggle();
+    });
+
+
+    //change password
+    $(".change_password_profile").on("submit", function (e) {
+        e.preventDefault();
+        var oldPass = $("#inputOldPass").val();
+        var newPass = $("#inputNewPass").val();
+        var isValid = true;
+        var sqlInjectionPattern = /[%&()+'";<>]/;
+        if(oldPass.length < 6 || newPass.length < 6) {
+            isValid = false;
+            $('#validate_password').show().text('Mật khẩu phải có ít nhất 6 ký tự.');
+        }
+        if(sqlInjectionPattern.test(newPass)) {
+            isValid = false;
+            $('#validate_password').show().text('Mật khẩu chứa ký tự đặc biệt không hợp lệ.');
+        }
+
+        if(isValid) {
+            $('#validate_password').hide().text('');
+            var updataPass = {
+            'oldPass'  : oldPass,
+            'newPass'   : newPass,
+            '_token'    : $('input[name="_token"]').val()
+            }
+            console.log(updataPass);
+
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'),
+                data: updataPass,
+                success: function(response) {
+                    if(response.success) {
+                        $('#validate_password').hide().text('');
+                        alert('Đổi mật khẩu thành công!');
+                    } else {
+                        alert('Đổi mật khẩu thất bại!');
+                    }
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    $('#validate_password').show().text(xhr.responseJSON.message);
+                },
+            });
+        }
+    });
+
+    // //header icon login
+    //     $("#userDropdown").click(function () {
+    //     $("#dropdownMenu").toggle();
+    // });
+    // $(document).click(function (e) {
+    //   if (!$(e.target).closest('.dropdown').length) {
+    //     $("#dropdownMenu").hide();
+    //   }
+    // });
+    $("#userDropdown").click(function (e) {
+        e.stopPropagation(); // Ngăn sự kiện lan ra ngoài
+        $("#dropdownMenu").toggle();
+    });
+
+    $(document).click(function (e) {
+        if (!$(e.target).closest('.dropdown').length) {
+            $("#dropdownMenu").hide();
+        }
+    });
 });
+
 
