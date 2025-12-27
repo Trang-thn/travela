@@ -6,8 +6,7 @@
             </div>
             <div class="container container-1400">
                 <div class="search-filter-inner" data-aos="zoom-out-down" data-aos-duration="1500" data-aos-offset="50">
-                    <div class="filter-item clearfix">
-                    </div>
+
                     <div class="filter-item clearfix">
                         <div class="icon"><i class="fal fa-map-marker-alt"></i></div>
                         <span class="title">Điểm đến</span>
@@ -20,20 +19,12 @@
                     <div class="filter-item clearfix">
                         <div class="icon"><i class="fal fa-calendar-alt"></i></div>
                         <span class="title">Ngày khởi hành</span>
-                        <select name="date" id="date">
-                            <option value="value1">Từ ngày </option>
-                            <option value="value2">10</option>
-                            <option value="value2">31</option>
-                        </select>
+                        <input type="text" id="start_date" name="start_date" class="datetimepicker datetimepicker-custom" placeholder="Chọn ngày khởi hành">
                     </div>
                     <div class="filter-item clearfix">
                         <div class="icon"><i class="fal fa-calendar-alt"></i></div>
                         <span class="title">Ngày kết thúc</span>
-                        <select name="date" id="date">
-                              <option value="value1">Từ ngày </option>
-                            <option value="value2">10</option>
-                            <option value="value2">31</option>
-                        </select>
+                        <input type="text" id="end_date" name="end_date" class="datetimepicker datetimepicker-custom" placeholder="Chọn ngày kết thúc">
                     </div>
                     <div class="search-button">
                         <button class="theme-btn">

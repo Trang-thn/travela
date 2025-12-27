@@ -32,6 +32,7 @@
     <!-- Main Style -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
+
 </head>
 <body>
 <div class="page-wrapper">

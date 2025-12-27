@@ -13,12 +13,13 @@
 
                     <div class="signin-form">
                         <h2 class="form-title">Đăng nhập</h2>
-                        <form method="POST" class="register-form" id="login-form">
+                        <form method="POST" action="{{ route('user-login') }}" class="login-form" id="login-form">
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="your_name" id="your_name" placeholder="Tên đăng nhập" required/>
                             </div>
                             <div class="invalid-feedback" style="margin-top: 15px" id="validate_username"></div>
+                            @csrf
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
                                 <input type="password" name="your_pass" id="your_pass" placeholder="Mật khẩu" required/>
@@ -47,12 +48,15 @@
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Đăng ký</h2>
-                        <form method="POST" class="register-form" id="register-form">
+                        <span id="error" class="alert alert-danger" style="padding: 5px 0px"></span>
+                        <span id="message" class="alert alert-success" style="padding: 5px 0px"></span>
+                        <form action="{{ route('register') }}" method="POST" class="register-form" id="register-form" style="margin-top: 10px">
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" id="name" placeholder="Tên tài khoản" required/>
                             </div>
                             <div class="invalid-feedback" style="margin-top: 15px" id="validate_username_regis"></div>
+                            @csrf {{-- // CSRF token for security --}}
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
                                 <input type="email" name="email" id="email" placeholder="Email" required/>

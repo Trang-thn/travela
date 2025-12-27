@@ -26,4 +26,6 @@ Route::get('/tour-detail', [TourDetailController::class, 'index'])->name('tour-d
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogs');
 Route::get('/blog-detail', [BlogDetailController::class, 'index'])->name('blog-detail');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::post('/login', [LoginController::class, 'register'])->name('register');
+Route::post('/login', [LoginController::class, 'login'])->name('user-login');
+Route::post('/register', [LoginController::class, 'register'])->name('register');
+Route::get('/activate-account/{token}', [LoginController::class, 'activateAccount'])->name('activate.account');

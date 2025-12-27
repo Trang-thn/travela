@@ -8,11 +8,13 @@ $(document).ready(function() {
         $('.signup').hide();
         $('.sign-in').show();
     });
+    $('#message').hide();
+    $('#error').hide();
     //handle form submission
     $('#login-form').on('submit', function(e) {
         e.preventDefault();
-        var username = $('#username_login').val().trim();
-        var password = $('#password_login').val().trim();
+        var username = $('#your_name').val().trim();
+        var password = $('#your_pass').val().trim();
 
         //noi dung thong bao loi va an di
         $('#validate_username').hide().text('');
@@ -36,17 +38,40 @@ $(document).ready(function() {
         }
 
         if(isValid) {
-            // this.submit();
+            var formData = {
+            'username': username,
+            'password': password,
+            '_token'        : $('input[name="_token"]').val()
+            };
+
+            console.log(formData);
+
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'),
+                data: formData,
+                success: function(response) {
+                    if(response.success) {
+                        window.location.href = "/";
+                    } else {
+                        $('#error').show().text(response.message);
+                        $('#message').hide();
+                    }
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    alert('Có lỗi xảy ra!');
+                }
+            });
         }
     });
 
     //Handle signup form submission
-    $('#signup-form').on('submit', function(e) {
+    $('#register-form').on('submit', function(e) {
         e.preventDefault();
         //lay gia tri tu form
-        var userName = $('#username_regester').val().trim();
-        var email = $('#email_regester').val().trim();
-        var password = $('#password_regester').val().trim();
+        var userName = $('#name').val().trim();
+        var email = $('#email').val().trim();
+        var password = $('#pass').val().trim();
         var rePass = $('#re_pass').val().trim();
 
         //noi dung thong bao loi va an di
@@ -82,7 +107,34 @@ $(document).ready(function() {
         }
 
         if(isValid) {
-            // this.submit();
+            var formData = {
+            'username_regis': userName,
+            'email'         : email,
+            'password_regis': password,
+            '_token'        : $('input[name="_token"]').val()
+        };
+        console.log(formData);
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('action'),
+            data: formData,
+            success: function(response) {
+                if(response.success) {
+                    $('#message').show().text(response.message);
+                    $('#error').hide();
+                    //reset form
+                    $('#register-form').trigger('reset');
+                } else {
+                    $('#error').show().text(response.message);
+                    $('#message').hide();
+                }
+            },
+            error: function(xhr, textStatus, errorThrown) {
+                alert('Có lỗi xảy ra!');
+            }
+        });
         }
     });
+
 });
+
