@@ -1,0 +1,160 @@
+$(document).ready(function () {
+    let discount = 0;
+    let totalPrice = 0;
+
+    function updateSummary() {
+        const numAdults = parseInt($("#numAdults").val());
+        const numChildren = parseInt($("#numChildren").val());
+
+        const adultPrice = parseInt($("#numAdults").data("price-adults"));
+        const childPrice = parseInt($("#numChildren").data("price-children"));
+
+        const adultTotal = numAdults * adultPrice;
+        const childrenTotal = numChildren * childPrice;
+
+        $(".quantity_adults").text(numAdults);
+        $(".quantity_children").text(numChildren);
+        $(".summary-item:nth-child(1) .total-price").text(adultTotal.toLocaleString() + " VND");
+        $(".summary-item:nth-child(2) .total-price").text(childrenTotal.toLocaleString() + " VND");
+
+        totalPrice = adultTotal + childrenTotal - discount;
+        $(".summary-item.total-price span:last").text(totalPrice.toLocaleString() + " VND");
+        $("input[name='totalPrice']").val(totalPrice);
+    }
+
+    $(".quantity-selector").on("click", ".quantity-btn", function () {
+        // tìm input nằm cùng khối với nút vừa bấm
+        const input = $(this).siblings(".quantity-input");
+
+        const min = parseInt(input.attr("min"));
+        let value = parseInt(input.val());
+
+        const quantityAvailable = parseInt($(".quantityAvailable").text().match(/\d+/)[0]);
+
+        const totalAdults = parseInt($("#numAdults").val());
+        const totalChildren = parseInt($("#numChildren").val());
+
+        if ($(this).hasClass("plus")) {
+            if (input.attr("id") === "numAdults") {
+                if (totalAdults + totalChildren < quantityAvailable) {
+                    value++;
+                } else {
+                    toastr.error("Không thể thêm số người lớn vượt quá số chỗ còn nhận!");
+                }
+            } else if (input.attr("id") === "numChildren") {
+                if (totalAdults + totalChildren < quantityAvailable) {
+                    value++;
+                } else {
+                    toastr.error("Không thể thêm số trẻ em vượt quá số chỗ còn nhận!");
+                }
+            }
+        } else if ($(this).hasClass("minus") && value > min) {
+            value--;
+        }
+
+        // cập nhật lại input
+        input.val(value);
+        updateSummary();
+    });
+    // Áp dụng mã giảm giá
+    $(".btn-coupon").on("click", function () {
+        const couponCode = $(".order-coupon-input").val().trim();
+        if (couponCode === "DISCOUNT10") {
+            discount = 0.1 * ($("#numAdults").val() * $("#numAdults").data("price-adults") +
+                              $("#numChildren").val() * $("#numChildren").data("price-children"));
+            toastr.success("Áp dụng mã giảm giá thành công!");
+        } else {
+            discount = 0;
+            toastr.error("Mã giảm giá không hợp lệ!");
+        }
+        $(".summary-item:nth-child(3) .total-price").text(discount.toLocaleString() + " VND");
+        updateSummary();
+    });
+
+    // Checkbox đồng ý điều khoản
+    $("#agree").on("change", function () {
+        if ($(this).is(":checked")) {
+            $(".btn-submit-booking").removeClass("inactive").css("pointer-events", "auto");
+        } else {
+            $(".btn-submit-booking").addClass("inactive").css("pointer-events", "none");
+        }
+    });
+
+    // Chọn phương thức thanh toán
+    $("input[name='paymentMethod']").change(function () {
+        const method = $(this).val();
+        $("#payment_hidden").val(method);
+
+        const isPaymentSelected = method === "paypal" || method === "momo";
+        $(".btn-submit-booking").toggle(!isPaymentSelected);
+
+        if (method === "paypal") {
+            var totalPricePayment = totalPrice / 25000;
+            paypal.Buttons({
+                createOrder: (data, actions) => actions.order.create({
+                    purchase_units: [{ amount: { value: totalPricePayment.toFixed(2) } }]
+                }),
+                onApprove: (data, actions) => actions.order.capture().then(details => {
+                    $("<input>", {
+                        type: "hidden",
+                        name: "transactionIdPayPal",
+                        value: details.id,
+                    }).appendTo(".booking-container");
+
+                    toastr.success("Thanh toán thành công!");
+                    $("#paypal-button-container").hide();
+                    $("input[name='paymentMethod']").prop("disabled", true);
+                    $(".booking-container").submit();
+                }),
+                onError: err => {
+                    toastr.error("Có lỗi xảy ra trong quá trình thanh toán!");
+                    console.error(err);
+                }
+            }).render("#paypal-button-container");
+        } else {
+            $("#paypal-button-container").empty();
+        }
+
+        if (method === "momo") {
+            $("#btn-momo-payment").show();
+        } else {
+            $("#btn-momo-payment").hide();
+        }
+    });
+
+    // Submit form
+    $(".btn-submit-booking").on("click", function (e) {
+        e.preventDefault();
+        let isValid = true;
+
+        $(".error-message").hide();
+
+        if (!$("#username").val().trim()) {
+            $("#usernameError").text("Họ và tên không được để trống").show();
+            isValid = false;
+        }
+        const email = $("#email").val().trim();
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (!email || !emailPattern.test(email)) {
+            $("#emailError").text("Email không hợp lệ").show();
+            isValid = false;
+        }
+        const tel = $("#tel").val().trim();
+        const telPattern = /^[0-9]{10,11}$/;
+        if (!tel || !telPattern.test(tel)) {
+            $("#telError").text("Số điện thoại phải có từ 10-11 chữ số").show();
+            isValid = false;
+        }
+        if (!$("#address").val().trim()) {
+            $("#addressError").text("Địa chỉ không được để trống").show();
+            isValid = false;
+        }
+
+        if (isValid) {
+            $(".booking-container").submit();
+        }
+    });
+
+    // Khởi tạo
+    updateSummary();
+});
