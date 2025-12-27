@@ -34,11 +34,17 @@
     <!-- Main Style -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
      <!-- datetimepiker-->
-    
+
+    {{-- login --}}
+        <!-- Font Icon -->
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/css-login/fonts/material-icon/css/material-design-iconic-font.min.css') }}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/css-login/style.css') }}">
     <!-- custom-css -->
     <link rel="stylesheet" href="{{ asset('clients/css/custom-css.css') }}">
-
-
+    {{-- user profile --}}
+    <link rel="stylesheet" href="{{ asset('clients/assets/css/user-profile.css') }}">
 
 
 </head>
@@ -114,9 +120,20 @@
                             </a>
                             <!-- menu sidbar -->
                             <div class="menu-sidebar">
-                                <button class="bg-transparent" style="font-size: 34px;color: white">
-                                   <i class="bx bxs-user bx-tada "></i>
-                                </button>
+                                <li class="drop-down">
+                                    <button class="dropdown-toggle bg-transparent" id="userDropdowm" style="font-size: 34px;color: white">
+                                    <i class="bx bxs-user bx-tada " style="font-size: 36px; color: white;"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" id="dropdownMenu">
+                                        @if(session()->has('username'))
+                                            <li>{{ session()->get('username') }}</li>
+                                            <li><a href="#">Thông tin cá nhân</a></li>
+                                            <li><a href="{{ route('logout') }}">Đăng xuất</a></li>
+                                        @else
+                                            <li><a href="{{ route('login') }}">Đăng nhập</a></li>
+                                        @endif
+                                    </ul>
+                                </li>
                             </div>
                         </div>
                     </div>

@@ -133,12 +133,12 @@
 
     </div>
     <!--End pagewrapper-->
-
+{{--
     @if(session('success'))
         <script>
             alert("{{ session('error') }}");
         </script>
-@endif
+@endif --}}
     <!-- Jquery -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap -->
@@ -161,14 +161,19 @@
     <script src="assets/js/aos.js"></script>
     <!-- Custom script -->
     <script src="assets/js/script.js"></script>
-    <!-- Custom script by Trang -->
-    
-     
-     
 
 
-   
-    
+
+
+
+    {{-- <!-- Custom script by Trang -->
+    <script src="{{ asset('clients/assets/js/custom-js.js') }}"></script> --}}
+
+
+
+
+
+
 
 
 </body>

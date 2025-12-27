@@ -136,5 +136,34 @@ $(document).ready(function() {
         }
     });
 
+        //  USER PROFILE
+    $(".updateUser").on("submit", function (e) {
+        e.preventDefault();
+        var fullName = $("#inputFullName").val();
+        var address = $("#inputLocation").val();
+        var email = $("#inputEmailAddress").val();
+        var phone = $("#inputPhone").val();
+
+        var dataUpdate = {
+            'fullName'  : fullName,
+            'address'   : address,
+            'email'     : email,
+            'phone'     : phone,
+            '_token'    : $('input[name="_token"]').val()
+        }
+        console.log(dataUpdate);
+
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('action'),
+            data: dataUpdate,
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(xhr, textStatus, errorThrown) {
+                alert('Có lỗi xảy ra khi cập nhật thông tin!');
+            }
+        });
+    });
 });
 
