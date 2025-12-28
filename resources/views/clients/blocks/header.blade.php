@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="{{ asset('/css/slick.min.css') }}">
     <!-- Main Style -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('clients/assets/css/custom-css.css') }}">
+
 
 
 
@@ -45,7 +45,8 @@
     <!-- Main css -->
     <link rel="stylesheet" href="{{ asset('clients/assets/css/css-login/style.css') }}">
     <!-- custom-css -->
-    <link rel="stylesheet" href="{{ asset('clients/assets/css/custom-css.css') }}">
+   <link rel="stylesheet" href="{{ asset('assets/css/custom-css.css') }}">
+
     {{-- user profile --}}
     <link rel="stylesheet" href="{{ asset('clients/assets/css/user-profile.css') }}">
 
@@ -115,10 +116,9 @@
                                 <i class="fal fa-arrow-right"></i>
                             </a>
                         <!-- menu sidebar -->
-                        <div class="menu-sidebar">
-                            <li class="dropdown">
-                                <button class="dropdown-toggle bg-transparent" id="userDropdown" style="font-size: 34px;color: white:aliceblue">
-                                <i class="bx bxs-user bx-tada icon-user" style="font-size: 36px; color: white;"></i>
+                          <div class="dropdown">
+                                <button class="dropdown-toggle bg-transparent" id="userDropdown" style="font-size: 34px;color:aliceblue">
+                                    <i class="bx bxs-user bx-tada icon-user"></i>
                                 </button>
                                 <ul class="dropdown-menu" id="dropdownMenu">
                                     @if(session()->has('username'))
@@ -129,17 +129,7 @@
                                         <li><a href="{{ route('login') }}">Đăng nhập</a></li>
                                     @endif
                                 </ul>
-                            </li>
-                            {{-- <div class="dropdown">
-                                <button class="dropdown-toggle bg-transparent" id="userDropdown" style="font-size: 34px;color:aliceblue">
-                                    <i class="bx bxs-user bx-tada icon-user"></i>
-                                </button>
-                                <ul class="dropdown-menu" id="dropdownMenu" style="display: none">
-                                    <li><a href="{{ route('login') }}">Đăng nhập</a></li>
-                                    <li><a href="#">Thông tin cá nhân</a></li>
-                                </ul>
-                            </div> --}}
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
