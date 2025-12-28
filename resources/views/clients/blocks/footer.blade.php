@@ -73,7 +73,7 @@
                                     <li><a href="destination-details.html">Miền Bắc </a></li>
                                     <li><a href="destination-details.html">Miền Trung  </a></li>
                                     <li><a href="destination-details.html">Miền Nam </a></li>
-                                     
+
                                 </ul>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                                     <li><a href="{{ route('contact') }}">Trekking</a></li>
                                     <li><a href="{{ route('contact') }}">Du lịch xe đạp</a></li>
                                     <li><a href="{{ route('contact') }}">Gia đình</a></li>
-                                    
+
                                 </ul>
                             </div>
                         </div>
@@ -133,8 +133,12 @@
 
     </div>
     <!--End pagewrapper-->
-
-
+{{--
+    @if(session('success'))
+        <script>
+            alert("{{ session('error') }}");
+        </script>
+@endif --}}
     <!-- Jquery -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap -->
@@ -157,16 +161,13 @@
     <script src="assets/js/aos.js"></script>
     <!-- Custom script -->
     <script src="assets/js/script.js"></script>
+
     <!-- Custom script by Trang -->
+    <script src="{{ asset('clients/assets/js/custom-js.js') }}"></script>
+
+    <!-- Custom script by Linh -->
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
-     
-     
-
-
-   
-    
 
 
 </body>

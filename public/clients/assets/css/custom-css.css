@@ -2,7 +2,7 @@
     padding:0%;
 
  }
-  
+
  /* Dropdown menu hidden by default */
 .dropdown {
     position: relative;
@@ -43,5 +43,6 @@
 .dropdown-toggle::after {
   display: none !important;
 }
-
- 
+#card_change_password{
+    display: none;
+}

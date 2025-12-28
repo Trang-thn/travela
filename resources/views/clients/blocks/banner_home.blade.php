@@ -6,8 +6,7 @@
             </div>
             <div class="container container-1400">
                 <div class="search-filter-inner" data-aos="zoom-out-down" data-aos-duration="1500" data-aos-offset="50">
-                    <div class="filter-item clearfix">
-                    </div>
+
                     <div class="filter-item clearfix">
                         <div class="icon"><i class="fal fa-map-marker-alt"></i></div>
                         <span class="title">Điểm đến</span>
@@ -28,7 +27,7 @@
                         <input type ="date" id ="end_date" name ="end_date" class="duration"placeholder="Chọn ngày về ">
                     </div>
 
-                   
+
 
                     <div class="search-button">
                         <button class="theme-btn">

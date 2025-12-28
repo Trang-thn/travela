@@ -8,6 +8,11 @@ $(document).ready(function() {
         $('.signup').hide();
         $('.sign-in').show();
     });
+//icon
+    userDropdown.addEventListener("click", function() {
+    dropdownMenu.classList.toggle("show");
+});
+
     //handle form submission
     $('#login-form').on('submit', function(e) {
         e.preventDefault();
