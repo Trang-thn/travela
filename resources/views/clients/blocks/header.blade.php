@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="{{ asset('/css/slick.min.css') }}">
     <!-- Main Style -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-     
+
 
 
 
@@ -116,17 +116,20 @@
                                 <i class="fal fa-arrow-right"></i>
                             </a>
                         <!-- menu sidebar -->
-                         
-                            <div class="dropdown">
-                                <button class="dropdown-toggle bg-transparent" id="userDropdown" style="font-size: 34px;color:black">
+                          <div class="dropdown">
+                                <button class="dropdown-toggle bg-transparent" id="userDropdown" style="font-size: 34px;color:aliceblue">
                                     <i class="bx bxs-user bx-tada icon-user"></i>
                                 </button>
-                                <ul class="dropdown-menu" id="dropdownMenu" >
-                                    <li><a href="{{ route('login') }}">Đăng nhập</a></li>
-                                    <li><a href="#">Thông tin cá nhân</a></li>
+                                <ul class="dropdown-menu" id="dropdownMenu">
+                                    @if(session()->has('username'))
+                                        <li>{{ session()->get('username') }}</li>
+                                        <li><a href="{{ route('user-profile') }}">Thông tin cá nhân</a></li>
+                                        <li><a href="{{ route('logout') }}">Đăng xuất</a></li>
+                                    @else
+                                        <li><a href="{{ route('login') }}">Đăng nhập</a></li>
+                                    @endif
                                 </ul>
-                            </div> 
-                        </div>
+                            </div>
                     </div>
                 </div>
             </div>
