@@ -8,11 +8,18 @@ $(document).ready(function() {
         $('.signup').hide();
         $('.sign-in').show();
     });
+
+
+
+    $('#message').hide();
+    $('#error').hide();
+    $('#error_login').hide();
+
     //handle form submission
     $('#login-form').on('submit', function(e) {
         e.preventDefault();
-        var username = $('#username_login').val().trim();
-        var password = $('#password_login').val().trim();
+        var username = $('#your_name').val().trim();
+        var password = $('#your_pass').val().trim();
 
         //noi dung thong bao loi va an di
         $('#validate_username').hide().text('');
@@ -36,17 +43,39 @@ $(document).ready(function() {
         }
 
         if(isValid) {
-            // this.submit();
+            var formData = {
+            'username': username,
+            'password': password,
+            '_token'        : $('input[name="_token"]').val()
+            };
+
+            console.log(formData);
+
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'),
+                data: formData,
+                success: function(response) {
+                    if(response.success) {
+                        window.location.href = "/";
+                    } else {
+                        $('#error_login').show().text(response.message);
+                    }
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    alert('Có lỗi xảy ra!');
+                }
+            });
         }
     });
 
     //Handle signup form submission
-    $('#signup-form').on('submit', function(e) {
+    $('#register-form').on('submit', function(e) {
         e.preventDefault();
         //lay gia tri tu form
-        var userName = $('#username_regester').val().trim();
-        var email = $('#email_regester').val().trim();
-        var password = $('#password_regester').val().trim();
+        var userName = $('#name').val().trim();
+        var email = $('#email').val().trim();
+        var password = $('#pass').val().trim();
         var rePass = $('#re_pass').val().trim();
 
         //noi dung thong bao loi va an di
@@ -82,7 +111,133 @@ $(document).ready(function() {
         }
 
         if(isValid) {
-            // this.submit();
+            var formData = {
+            'username_regis': userName,
+            'email'         : email,
+            'password_regis': password,
+            '_token'        : $('input[name="_token"]').val()
+        };
+        console.log(formData);
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('action'),
+            data: formData,
+            success: function(response) {
+                if(response.success) {
+                    $('#message').show().text(response.message);
+                    $('#error').hide();
+                    //reset form
+                    $('#register-form').trigger('reset');
+                } else {
+                    $('#error').show().text(response.message);
+                    $('#message').hide();
+                }
+            },
+            error: function(xhr, textStatus, errorThrown) {
+                alert('Có lỗi xảy ra!');
+            }
+        });
+        }
+    });
+
+    //  USER PROFILE
+    $(".updateUser").on("submit", function (e) {
+        e.preventDefault();
+        var fullName = $("#inputFullName").val();
+        var address = $("#inputLocation").val();
+        var email = $("#inputEmailAddress").val();
+        var phone = $("#inputPhone").val();
+
+        var dataUpdate = {
+            'fullName'  : fullName,
+            'address'   : address,
+            'email'     : email,
+            'phone'     : phone,
+            '_token'    : $('input[name="_token"]').val()
+        }
+        console.log(dataUpdate);
+
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('action'),
+            data: dataUpdate,
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(xhr, textStatus, errorThrown) {
+                alert('Có lỗi xảy ra khi cập nhật thông tin!');
+            },
+        });
+    });
+
+    $('#update_password_profile').click( function () {
+        $("#card_change_password").toggle();
+    });
+
+
+    //change password
+    $(".change_password_profile").on("submit", function (e) {
+        e.preventDefault();
+        var oldPass = $("#inputOldPass").val();
+        var newPass = $("#inputNewPass").val();
+        var isValid = true;
+        var sqlInjectionPattern = /[%&()+'";<>]/;
+        if(oldPass.length < 6 || newPass.length < 6) {
+            isValid = false;
+            $('#validate_password').show().text('Mật khẩu phải có ít nhất 6 ký tự.');
+        }
+        if(sqlInjectionPattern.test(newPass)) {
+            isValid = false;
+            $('#validate_password').show().text('Mật khẩu chứa ký tự đặc biệt không hợp lệ.');
+        }
+
+        if(isValid) {
+            $('#validate_password').hide().text('');
+            var updataPass = {
+            'oldPass'  : oldPass,
+            'newPass'   : newPass,
+            '_token'    : $('input[name="_token"]').val()
+            }
+            console.log(updataPass);
+
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('action'),
+                data: updataPass,
+                success: function(response) {
+                    if(response.success) {
+                        $('#validate_password').hide().text('');
+                        alert('Đổi mật khẩu thành công!');
+                    } else {
+                        alert('Đổi mật khẩu thất bại!');
+                    }
+                },
+                error: function(xhr, textStatus, errorThrown) {
+                    $('#validate_password').show().text(xhr.responseJSON.message);
+                },
+            });
+        }
+    });
+
+    // //header icon login
+    //     $("#userDropdown").click(function () {
+    //     $("#dropdownMenu").toggle();
+    // });
+    // $(document).click(function (e) {
+    //   if (!$(e.target).closest('.dropdown').length) {
+    //     $("#dropdownMenu").hide();
+    //   }
+    // });
+    $("#userDropdown").click(function (e) {
+        e.stopPropagation(); // Ngăn sự kiện lan ra ngoài
+        $("#dropdownMenu").toggle();
+    });
+
+    $(document).click(function (e) {
+        if (!$(e.target).closest('.dropdown').length) {
+            $("#dropdownMenu").hide();
         }
     });
 });
+
+

@@ -21,7 +21,6 @@ $(document).ready(function () {
         $(".summary-item.total-price span:last").text(totalPrice.toLocaleString() + " VND");
         $("input[name='totalPrice']").val(totalPrice);
     }
-
     $(".quantity-selector").on("click", ".quantity-btn", function () {
         // tìm input nằm cùng khối với nút vừa bấm
         const input = $(this).siblings(".quantity-input");
@@ -61,7 +60,7 @@ $(document).ready(function () {
         const couponCode = $(".order-coupon-input").val().trim();
         if (couponCode === "DISCOUNT10") {
             discount = 0.1 * ($("#numAdults").val() * $("#numAdults").data("price-adults") +
-                              $("#numChildren").val() * $("#numChildren").data("price-children"));
+                $("#numChildren").val() * $("#numChildren").data("price-children"));
             toastr.success("Áp dụng mã giảm giá thành công!");
         } else {
             discount = 0;
@@ -79,6 +78,8 @@ $(document).ready(function () {
             $(".btn-submit-booking").addClass("inactive").css("pointer-events", "none");
         }
     });
+    //kiểm tra dl trống
+
 
     // Chọn phương thức thanh toán
     $("input[name='paymentMethod']").change(function () {
@@ -89,6 +90,7 @@ $(document).ready(function () {
         $(".btn-submit-booking").toggle(!isPaymentSelected);
 
         if (method === "paypal") {
+            $("#paypal-button-container").show();
             var totalPricePayment = totalPrice / 25000;
             paypal.Buttons({
                 createOrder: (data, actions) => actions.order.create({
@@ -100,34 +102,57 @@ $(document).ready(function () {
                         name: "transactionIdPayPal",
                         value: details.id,
                     }).appendTo(".booking-container");
-
                     toastr.success("Thanh toán thành công!");
-                    $("#paypal-button-container").hide();
-                    $("input[name='paymentMethod']").prop("disabled", true);
+
+                    // đảm bảo paymentMethod = paypal
+                    $("input[name='paymentMethod'][value='paypal']").prop("checked", true);
+
                     $(".booking-container").submit();
                 }),
+
                 onError: err => {
                     toastr.error("Có lỗi xảy ra trong quá trình thanh toán!");
                     console.error(err);
                 }
             }).render("#paypal-button-container");
+
         } else {
             $("#paypal-button-container").empty();
         }
+// $("input[name='paymentMethod']").change(function () {
+//     const method = $(this).val();
 
-        if (method === "momo") {
-            $("#btn-momo-payment").show();
-        } else {
-            $("#btn-momo-payment").hide();
-        }
-    });
+    if (method === "momo") {
+        $("#btn-momo-payment").show();   // chỉ hiện nút
+    } else {
+        $("#btn-momo-payment").hide();   // ẩn nút
+    }
+});
+
+$("#btn-momo-payment").on("click", function(e) {
+    e.preventDefault();
+    // đổi action của form sang route MoMo
+    $(".booking-container").attr("action", $(this).data("urlmomo"));
+    // submit form
+    $(".booking-container").submit();
+});
+
+
+
+    //     if (method === "momo") {
+    //         $("#btn-momo-payment").show();
+    //         $(".booking-container-momo").submit();
+    //     } else {
+    //         $("#btn-momo-payment").hide();
+    //     }
+    // });
 
     // Submit form
     $(".btn-submit-booking").on("click", function (e) {
         e.preventDefault();
         let isValid = true;
 
-        $(".error-message").hide();
+        $(".error-message").hide().text("");
 
         if (!$("#username").val().trim()) {
             $("#usernameError").text("Họ và tên không được để trống").show();
@@ -147,6 +172,14 @@ $(document).ready(function () {
         }
         if (!$("#address").val().trim()) {
             $("#addressError").text("Địa chỉ không được để trống").show();
+            isValid = false;
+        }
+        if (!$("#agree").is(":checked")) {
+            toastr.error("Bạn phải đồng ý với điều khoản trước khi đặt tour!");
+            isValid = false;
+        }
+        if (!$("input[name='paymentMethod']:checked").val()) {
+            toastr.error("Bạn phải chọn phương thức thanh toán!");
             isValid = false;
         }
 

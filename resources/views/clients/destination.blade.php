@@ -321,7 +321,7 @@
                         <div class="newsletter-content-part text-white rmb-55" data-aos="zoom-in-right" data-aos-duration="1500" data-aos-offset="50">
                             <div class="section-title counter-text-wrap mb-45">
                                 <h2>Đăng ký nhận ưu đãi và mẹo du lịch hữu ích.</h2>
-                                <p>Website<span class="count-text plus" data-speed="3000" data-stop="34500">0</span> Trải nghiệm đáng nhớ nhất</p>
+                                <p>Website<span class="count-text plus" data-speed="3000" data-stop="3450">0</span> Trải nghiệm đáng nhớ nhất</p>
                             </div>
                             <form class="newsletter-form mb-15" action="#">
                                 <input id="news-email" type="email" placeholder="Email Address" required>

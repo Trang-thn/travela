@@ -12,20 +12,16 @@ class Tours extends Model
     use HasFactory;
 
     protected $table = 'tbl_tours';
-    protected $primaryKey = 'tourId';
-    public $timestamps = false;
 
-    protected $fillable = [
-        'title', 'description', 'quantity', 'priceAdult', 'priceChild',
-        'time', 'domain', 'destination', 'availability', 'startDate', 'endDate'
-    ];
+    // Nếu bảng không có created_at/updated_at thì tắt timestamps
+    public $timestamps = false;
 
     /**
      * Lấy tất cả tours kèm danh sách hình ảnh
      */
     public function getAllTours(): Collection
     {
-        $allTours = self::all();
+        $allTours = DB::table($this->table)->get();
 
         foreach ($allTours as $tour) {
             $tour->images = DB::table('tbl_images')
@@ -41,18 +37,23 @@ class Tours extends Model
      */
     public function getTourDetail($id)
     {
-        $getTourDetail = self::find($id);
+        $getTourDetail = DB::table($this->table)
+            ->where('tourId', $id)
+            ->first();
 
         if ($getTourDetail) {
+            // Lấy danh sách hình ảnh (giới hạn 5 ảnh)
             $getTourDetail->images = DB::table('tbl_images')
                 ->where('tourId', $getTourDetail->tourId)
                 ->limit(5)
                 ->pluck('imageUrl');
 
+            // Lấy timeline
             $getTourDetail->timeline = DB::table('tbl_timeline')
                 ->where('tourId', $getTourDetail->tourId)
                 ->get();
 
+            // Lấy đánh giá
             $getTourDetail->reviews = DB::table('tbl_reviews')
                 ->join('users', 'tbl_reviews.userId', '=', 'users.id')
                 ->where('tourId', $getTourDetail->tourId)
@@ -68,20 +69,23 @@ class Tours extends Model
      */
     public function filterTours($filters = [], $sorting = null)
     {
-        $query = self::query();
+        $getTours = DB::table($this->table);
 
+        // Áp dụng bộ lọc
         if (!empty($filters)) {
             foreach ($filters as $column => $value) {
-                $query->where($column, $value);
+                $getTours->where($column, $value);
             }
         }
 
+        // Sắp xếp
         if (!empty($sorting) && isset($sorting[0][0]) && isset($sorting[0][1])) {
-            $query->orderBy($sorting[0][0], $sorting[0][1]);
+            $getTours->orderBy($sorting[0][0], $sorting[0][1]);
         }
 
-        $tours = $query->get();
+        $tours = $getTours->get();
 
+        // Lấy hình ảnh cho từng tour
         foreach ($tours as $tour) {
             $tour->images = DB::table('tbl_images')
                 ->where('tourId', $tour->tourId)
@@ -96,7 +100,9 @@ class Tours extends Model
      */
     public function updateTours($tourId, $data): int
     {
-        return self::where('tourId', $tourId)->update($data);
+        return DB::table($this->table)
+            ->where('tourId', $tourId)
+            ->update($data);
     }
 
     /**
@@ -109,7 +115,6 @@ class Tours extends Model
             ->join('tbl_checkout', 'tbl_booking.bookingId', '=', 'tbl_checkout.bookingId')
             ->where('tbl_booking.bookingId', $bookingId)
             ->where('tbl_checkout.checkoutId', $checkoutId)
-            ->select('tbl_tours.*', 'tbl_booking.*', 'tbl_checkout.*')
             ->first();
     }
 
@@ -118,12 +123,14 @@ class Tours extends Model
      */
     public function createReviews($data): bool
     {
-        return DB::table('tbl_reviews')->insert([
+        $insert = DB::table('tbl_reviews')->insert([
             'tourId'  => $data['tourId'],
             'userId'  => $data['userId'],
             'rating'  => $data['rating'],
             'comment' => $data['comment'],
         ]);
+
+        return $insert ? true : false;
     }
 
     /**
@@ -131,7 +138,9 @@ class Tours extends Model
      */
     public function deleteTour($tourId): int
     {
-        return self::where('tourId', $tourId)->delete();
+        return DB::table($this->table)
+            ->where('tourId', $tourId)
+            ->delete();
     }
 
     /**
@@ -139,8 +148,20 @@ class Tours extends Model
      */
     public function createTour($data): int
     {
-        $tour = self::create($data);
-        return $tour->tourId;
+        return DB::table($this->table)->insertGetId([
+            'title'       => $data['title'],
+            'description' => $data['description'],
+            'quantity'    => $data['quantity'],
+            'priceAdult'  => $data['priceAdult'],
+            'priceChild'  => $data['priceChild'],
+            'time'        => $data['time'],
+            'domain'      => $data['domain'], // b/t/n
+            'destination' => $data['destination'],
+            'availability'=> $data['availability'],
+            'startDate'   => $data['startDate'],
+            'endDate'     => $data['endDate'],
+            'reviews'     => $data['reviews'] ?? null,
+        ]);
     }
 
     /**

@@ -31,6 +31,7 @@ class BookingController extends Controller
 
     public function createBooking(Request $req)
     {
+        // Chặn nếu chưa chọn phương thức thanh toán
         $address       = $req->input('address');
         $email         = $req->input('email');
         $fullName      = $req->input('fullName');
@@ -61,7 +62,8 @@ class BookingController extends Controller
             'bookingId'     => $bookingId,
             'paymentMethod' => $paymentMethod,
             'amount'        => $totalPrice,
-            'paymentStatus' => 'paid',
+            'paymentStatus' => ($paymentMethod === 'paypal' || $paymentMethod === 'momo') ? 'y' : 'n',
+            'transactionId' => '' // mặc định rỗng
         ];
 
         if ($paymentMethod === 'paypal') {
@@ -69,6 +71,7 @@ class BookingController extends Controller
         } elseif ($paymentMethod === 'momo') {
             $dataCheckout['transactionId'] = $req->transactionIdMomo;
         }
+
 
         $checkoutId = $this->checkout->createCheckout($dataCheckout);
 
@@ -89,4 +92,6 @@ class BookingController extends Controller
             'checkoutId' => $checkoutId,
         ])->with('success', 'Đặt tour thành công');
     }
+    
+    
 }

@@ -221,6 +221,13 @@
             background-color: #9adee9;
             cursor: not-allowed;
         }
+
+        #btn-momo-payment img {
+            width: 24px;
+            height: auto;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
     </style>
 </head>
 
@@ -230,9 +237,9 @@
 
         <form action="{{ route('create-booking') }}" method="POST" class="booking-container">
             @csrf
-             <input type="hidden" name="tourId" value="{{ $tour->tourId }}">
-    <input type="hidden" name="userId" value="{{ auth()->id() }}">
-    <input type="hidden" id="payment_hidden" name="paymentMethod" value="">
+            <input type="hidden" name="tourId" value="{{ $tour->tourId }}">
+            <input type="hidden" name="userId" value="{{ auth()->id() }}">
+            <input type="hidden" id="payment_hidden" name="payment_hidden" value="">
             <!-- Contact Information -->
             <div class="booking-info">
                 <h2 class="booking-header">Thông Tin Liên Lạc</h2>
@@ -303,93 +310,103 @@
                 <!-- Payment Method -->
                 <h2 class="booking-header">Phương Thức Thanh Toán</h2>
 
-                <label class="payment-option">
-                    <input type="radio" name="paymentMethod" value="office-payment" required>
-                    <img src="{{ asset('assets/images/booking/cong-thanh-toan-paypal.jpg') }}" alt="Office Payment">
-                    Thanh toán tại văn phòng
-                </label>
+                <div class="payment-method">
+                    <label class="payment-option">
+                        <input type="radio" name="paymentMethod" value="office" required>
+                        Thanh toán tại văn phòng
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="paymentMethod" value="paypal" required>
+                        <img src="{{ asset('assets/images/booking/cong-thanh-toan-paypal.jpg') }}" alt="PayPal">
+                        Thanh toán bằng PayPal
+                    </label>
 
-                <label class="payment-option">
-                    <input type="radio" name="paymentMethod" value="paypal-payment" required>
-                    <img src="{{ asset('assets/images/booking/cong-thanh-toan-paypal.jpg') }}" alt="PayPal">
-                    Thanh toán bằng PayPal
-                </label>
+                    <label class="payment-option">
+                        <input type="radio" name="paymentMethod" value="momo" required>
+                        <img src="{{ asset('assets/images/booking/thanh-toan-momo.jpg') }}" alt="MoMo">
+                        Thanh toán bằng Momo
+                    </label>
 
-                <label class="payment-option">
-                    <input type="radio" name="paymentMethod" value="momo-payment" required>
-                    <img src="{{ asset('assets/images/booking/thanh-toan-momo.jpg') }}" alt="MoMo">
-                    Thanh toán bằng Momo
-                </label>
+                    
+                </div>
+
 
 
             </div>
-                <!-- Order Summary -->
-                <div class="booking-summary">
-                    <div class="summary-section">
-                        <p>Mã tour : {{ $tour->tourId }}</p>
-                        <h5 class="widget-tital">{{ $tour->title }}</h5>
-                        <p>Ngày khởi hành : {{ date('d-m-y', strtotime($tour->startDate)) }}</p>
-                        <p>Ngày kết thúc : {{ date('d-m-y', strtotime($tour->endDate)) }}</p>
-                        <p class="quantityAvailable">Số chỗ còn nhận tour : {{ $tour->quantity }}</p>
-                    </div>
-
-                    <div class="order-summary">
-                        <div class="summary-item">
-                            <span>Người lớn:</span>
-                            <div>
-                                <span class="quantity_adults">1</span>
-                                <span>X</span>
-                                <span class="total-price">0 VNĐ</span>
-                            </div>
-                        </div>
-                        <div class="summary-item">
-                            <span>Trẻ em:</span>
-                            <div>
-                                <span class="quantity_children">0</span>
-                                <span>X</span>
-                                <span class="total-price">0 VNĐ</span>
-                            </div>
-                        </div>
-                        <div class="summary-item">
-                            <span>Giảm giá:</span>
-                            <div>
-                                <span class="total-price">0 VNĐ</span>
-                            </div>
-                        </div>
-                        <div class="summary-item total-price">
-                            <span>Tổng cộng:</span>
-                            <span>0 VNĐ</span>
-                            <input type="hidden" class="totalPrice" name="totalPrice" value="">
-                        </div>
-                    </div>
-
-                    <div class="order-coupon">
-                        <input type="text" class="order-coupon-input" placeholder="Mã giảm giá"
-                            style="width:65%;">
-                        <button style="width: 30%" class="booking-btn btn-coupon">Áp dụng</button>
-                    </div>
-
-                    <!-- Chọn phương thức thanh toán -->
-                    <div class="payment-method">
-                        <label>
-                            <input type="hidden" name="paymentMethod" value="paypal">
-                        </label>
-                        <label>
-                            <input type="hidden" name="paymentMethod" value="momo"> 
-                        </label>
-                    </div>
-
-                    <!-- PayPal button -->
-                    <div id="paypal-button-container" style="display:none;"></div>
-
-                    <!-- Submit / Momo -->
-                    <button type="submit" class="booking-btn btn-submit-booking inactive">Xác nhận</button>
-                    <button id="btn-momo-payment" class="booking-btn" style="display:none;"
-                        data-urlmomo="{{ route('createMomoPayment') }}">
-                        Thanh toán với Momo
-                        <img src="{{ asset('assets/images/booking/icon-thanh-toan-momo.jpg') }}" alt="Momo">
-                    </button>
+            <!-- Order Summary -->
+            <div class="booking-summary">
+                <div class="summary-section">
+                    <p>Mã tour : {{ $tour->tourId }}</p>
+                    <h5 class="widget-tital">{{ $tour->title }}</h5>
+                    <p>Ngày khởi hành : {{ date('d-m-y', strtotime($tour->startDate)) }}</p>
+                    <p>Ngày kết thúc : {{ date('d-m-y', strtotime($tour->endDate)) }}</p>
+                    <p class="quantityAvailable">Số chỗ còn nhận tour : {{ $tour->quantity }}</p>
                 </div>
+
+                <div class="order-summary">
+                    <div class="summary-item">
+                        <span>Người lớn:</span>
+                        <div>
+                            <span class="quantity_adults">1</span>
+                            <span>X</span>
+                            <span class="total-price">0 VNĐ</span>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <span>Trẻ em:</span>
+                        <div>
+                            <span class="quantity_children">0</span>
+                            <span>X</span>
+                            <span class="total-price">0 VNĐ</span>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <span>Giảm giá:</span>
+                        <div>
+                            <span class="total-price">0 VNĐ</span>
+                        </div>
+                    </div>
+                    <div class="summary-item total-price">
+                        <span>Tổng cộng:</span>
+                        <span>0 VNĐ</span>
+                        <input type="hidden" class="totalPrice" name="totalPrice" value="">
+                    </div>
+                </div>
+
+                <div class="order-coupon">
+                    <input type="text" class="order-coupon-input" placeholder="Mã giảm giá" style="width:65%;">
+                    <button style="width: 30%" class="booking-btn btn-coupon">Áp dụng</button>
+                </div>
+
+                <!-- Chọn phương thức thanh toán -->
+                {{-- <div class="payment-method">
+                    <label>
+                        <input type="hidden" name="paymentMethod" value="paypal">
+                    </label>
+                    <label>
+                        <input type="hidden" name="paymentMethod" value="momo">
+                    </label>
+                </div> --}}
+
+                <!-- PayPal button -->
+                {{-- <div id="paypal-button-container" style="display:none;"></div> --}}
+                <!-- PayPal button container -->
+                <div id="paypal-button-container"  style="display:none;"></div>
+
+                {{-- <button id="btn-paypal-payment" class="booking-btn" style="display:none;"
+                    data-urlmomo="{{ route('createTransaction') }}">
+                    Thanh toán với Paypal
+                    <img src="{{ asset('assets/images/booking/icon-thanh-toan-momo.jpg') }}" alt="Paypal">
+                </button> --}}
+
+                <!-- Submit / Momo -->
+                <button type="submit" class="booking-btn btn-submit-booking inactive">Xác nhận</button>
+                <button id="btn-momo-payment" class="booking-btn" style="display:none;"
+                    data-urlmomo="{{ route('createMomoPayment') }}">
+                    Thanh toán với Momo
+                    <img src="{{ asset('assets/images/booking/icon-thanh-toan-momo.jpg') }}" alt="Momo">
+                </button>
+            </div>
 
             {{-- <button type="submit" class="booking-btn btn-submit-booking inactive">Xác Nhận và Thanh Toán</button> --}}
             </div>
@@ -399,6 +416,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ asset('assets/js/custom-js.js') }}"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id={{ env('PAYPAL_SANDBOX_CLIENT_ID') }}"></script>
+
     @yield('content')
 
     <!-- JS toastr -->

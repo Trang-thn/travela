@@ -24,11 +24,15 @@ class Checkout extends Model
     /**
      * Tạo checkout mới
      */
-    public function createCheckout(array $data): int
-    {
-        $checkout = self::create($data);
-        return $checkout->checkoutId;
+  public function createCheckout(array $data): int
+{
+    if (empty($data['paymentMethod'])) {
+        throw new \InvalidArgumentException("paymentMethod is required");
     }
+    $checkout = self::create($data);
+    return $checkout->checkoutId;
+}
+
 
     /**
      * Cập nhật trạng thái checkout theo bookingId
