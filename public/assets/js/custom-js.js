@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     let discount = 0;
     let totalPrice = 0;
@@ -67,7 +66,7 @@ $(document).ready(function () {
             discount = 0;
             toastr.error("Mã giảm giá không hợp lệ!");
         }
-        $(".summary-item:nth-child(3) .total-price").text(discount.toLocaleString() + " VND");
+$(".summary-item:nth-child(3) .total-price").text(discount.toLocaleString() + " VND");
         updateSummary();
     });
 
@@ -151,7 +150,7 @@ $("#btn-momo-payment").on("click", function(e) {
     // Submit form
     $(".btn-submit-booking").on("click", function (e) {
         e.preventDefault();
-        let isValid = true;
+let isValid = true;
 
         $(".error-message").hide().text("");
 
@@ -234,7 +233,7 @@ $("#btn-momo-payment").on("click", function(e) {
 
         if(isValid) {
             // this.submit();
-        }
+}
     });
 
     //Handle signup form submission
