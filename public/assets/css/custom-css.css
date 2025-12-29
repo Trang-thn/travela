@@ -37,4 +37,13 @@
 .dropdown:hover .dropdown-menu {
     display: block !important;
 }
+/*chiều cao bảng tour*/
+.hhh{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+}
   
